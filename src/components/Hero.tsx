@@ -1,13 +1,11 @@
+import { Link } from "react-router-dom";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-construction.jpg";
 
 export const Hero = () => {
   return (
-    <section
-      id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
-    >
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
@@ -48,16 +46,16 @@ export const Hero = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start animate-fade-in-up animation-delay-400">
             <Button variant="accent" size="xl" asChild>
-              <a href="#services" className="group">
+              <Link to="/services" className="group">
                 View Our Services
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </a>
+              </Link>
             </Button>
             <Button variant="hero" size="xl" asChild>
-              <a href="#contact">Request a Quote</a>
+              <Link to="/contact">Request a Quote</Link>
             </Button>
             <Button variant="hero" size="xl" asChild>
-              <a href="#fleet">See Our Fleet</a>
+              <Link to="/fleet">See Our Fleet</Link>
             </Button>
           </div>
         </div>
@@ -65,9 +63,7 @@ export const Hero = () => {
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float">
-        <a href="#about" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">
-          <ChevronDown className="h-8 w-8" />
-        </a>
+        <ChevronDown className="h-8 w-8 text-primary-foreground/60" />
       </div>
     </section>
   );

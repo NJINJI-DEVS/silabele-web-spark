@@ -1,19 +1,23 @@
 import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.jpg";
 
 const navigation = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
-  { name: "Services", href: "#services" },
-  { name: "Fleet", href: "#fleet" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Services", href: "/services" },
+  { name: "Fleet", href: "/fleet" },
+  { name: "Projects", href: "/projects" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,12 +27,14 @@ export const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const showTransparent = isHomePage && !scrolled;
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-background/95 backdrop-blur-md shadow-md"
-          : "bg-transparent"
+        showTransparent
+          ? "bg-transparent"
+          : "bg-background/95 backdrop-blur-md shadow-md"
       }`}
     >
       {/* Top Bar */}
@@ -51,30 +57,32 @@ export const Header = () => {
       </div>
 
       {/* Main Nav */}
-      <nav className={`container-custom py-4 ${scrolled ? "" : "text-primary-foreground"}`}>
+      <nav className="container-custom py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#home" className="flex items-center">
+          <Link to="/" className="flex items-center">
             <img
               src={logo}
               alt="SILABELE Trading Enterprise"
               className="h-12 md:h-16 w-auto"
             />
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
             {navigation.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
-                className={`nav-link font-medium ${scrolled ? "text-foreground" : "text-primary-foreground"}`}
+                to={item.href}
+                className={`nav-link font-medium ${
+                  showTransparent ? "text-primary-foreground" : "text-foreground"
+                } ${location.pathname === item.href ? "text-accent" : ""}`}
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
             <Button variant="accent" size="lg" asChild>
-              <a href="#contact">Request a Quote</a>
+              <Link to="/contact">Request a Quote</Link>
             </Button>
           </div>
 
@@ -85,9 +93,9 @@ export const Header = () => {
             aria-label="Toggle menu"
           >
             {isOpen ? (
-              <X className={`h-6 w-6 ${scrolled ? "text-foreground" : "text-primary-foreground"}`} />
+              <X className={`h-6 w-6 ${showTransparent ? "text-primary-foreground" : "text-foreground"}`} />
             ) : (
-              <Menu className={`h-6 w-6 ${scrolled ? "text-foreground" : "text-primary-foreground"}`} />
+              <Menu className={`h-6 w-6 ${showTransparent ? "text-primary-foreground" : "text-foreground"}`} />
             )}
           </button>
         </div>
@@ -97,19 +105,21 @@ export const Header = () => {
           <div className="lg:hidden absolute top-full left-0 right-0 bg-background shadow-lg border-t border-border animate-fade-in-down">
             <div className="container-custom py-4 flex flex-col gap-4">
               {navigation.map((item) => (
-                <a
+                <Link
                   key={item.name}
-                  href={item.href}
-                  className="text-foreground font-medium py-2 hover:text-accent transition-colors"
+                  to={item.href}
+                  className={`font-medium py-2 hover:text-accent transition-colors ${
+                    location.pathname === item.href ? "text-accent" : "text-foreground"
+                  }`}
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
               <Button variant="accent" className="mt-2" asChild>
-                <a href="#contact" onClick={() => setIsOpen(false)}>
+                <Link to="/contact" onClick={() => setIsOpen(false)}>
                   Request a Quote
-                </a>
+                </Link>
               </Button>
             </div>
           </div>

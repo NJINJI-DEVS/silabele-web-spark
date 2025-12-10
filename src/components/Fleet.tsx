@@ -1,4 +1,5 @@
-import { Download } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Download, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const fleetItems = [
@@ -38,9 +39,13 @@ const features = [
   "Competitive rates",
 ];
 
-export const Fleet = () => {
+interface FleetProps {
+  showCTA?: boolean;
+}
+
+export const Fleet = ({ showCTA = true }: FleetProps) => {
   return (
-    <section id="fleet" className="section-padding bg-primary">
+    <section className="section-padding bg-primary">
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -100,17 +105,30 @@ export const Fleet = () => {
               ))}
             </ul>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="accent" size="xl" asChild>
-                <a href="#contact">Request Equipment</a>
-              </Button>
-              <Button variant="hero" size="xl" className="group">
-                <Download className="mr-2 h-5 w-5" />
-                Download Fleet Brochure
-              </Button>
-            </div>
+            {showCTA && (
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button variant="accent" size="xl" asChild>
+                  <Link to="/contact">Request Equipment</Link>
+                </Button>
+                <Button variant="hero" size="xl" className="group">
+                  <Download className="mr-2 h-5 w-5" />
+                  Download Fleet Brochure
+                </Button>
+              </div>
+            )}
           </div>
         </div>
+
+        {!showCTA && (
+          <div className="text-center mt-12">
+            <Button variant="accent" size="xl" asChild>
+              <Link to="/fleet" className="group">
+                View Full Fleet
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </Button>
+          </div>
+        )}
       </div>
     </section>
   );
