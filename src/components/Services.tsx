@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {
   Building2,
   Truck,
@@ -71,28 +72,37 @@ const services = [
   },
 ];
 
-export const Services = () => {
+interface ServicesProps {
+  showAll?: boolean;
+  showHeader?: boolean;
+}
+
+export const Services = ({ showAll = true, showHeader = true }: ServicesProps) => {
+  const displayedServices = showAll ? services : services.slice(0, 3);
+
   return (
-    <section id="services" className="section-padding bg-background">
+    <section className="section-padding bg-background">
       <div className="container-custom">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <span className="text-accent font-semibold uppercase tracking-wider text-sm">
-            Our Services
-          </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-2 mb-4">
-            Comprehensive Infrastructure Solutions
-          </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            We serve public and private sector clients with a full suite of services
-            that meet technical, regulatory, and logistical demands across multiple
-            industries.
-          </p>
-        </div>
+        {showHeader && (
+          <div className="text-center mb-16">
+            <span className="text-accent font-semibold uppercase tracking-wider text-sm">
+              Our Services
+            </span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-2 mb-4">
+              Comprehensive Infrastructure Solutions
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              We serve public and private sector clients with a full suite of services
+              that meet technical, regulatory, and logistical demands across multiple
+              industries.
+            </p>
+          </div>
+        )}
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service) => (
+          {displayedServices.map((service) => (
             <article
               key={service.title}
               className="service-card group"
@@ -126,25 +136,34 @@ export const Services = () => {
               </ul>
 
               {/* Learn More Link */}
-              <a
-                href="#contact"
+              <Link
+                to="/contact"
                 className="inline-flex items-center text-accent font-semibold hover:underline group/link"
               >
-                Learn More
+                Get a Quote
                 <ArrowRight className="ml-2 h-4 w-4 group-hover/link:translate-x-1 transition-transform" />
-              </a>
+              </Link>
             </article>
           ))}
         </div>
 
         {/* CTA */}
         <div className="text-center mt-16">
-          <Button variant="accent" size="xl" asChild>
-            <a href="#contact" className="group">
-              Get a Custom Quote
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </a>
-          </Button>
+          {!showAll ? (
+            <Button variant="accent" size="xl" asChild>
+              <Link to="/services" className="group">
+                View All Services
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </Button>
+          ) : (
+            <Button variant="accent" size="xl" asChild>
+              <Link to="/contact" className="group">
+                Get a Custom Quote
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </Button>
+          )}
         </div>
       </div>
     </section>

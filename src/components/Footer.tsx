@@ -1,18 +1,20 @@
+import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Linkedin, Facebook, Instagram } from "lucide-react";
 import logo from "@/assets/logo.jpg";
 
 const footerLinks = {
   services: [
-    { name: "Civil Engineering", href: "#services" },
-    { name: "Plant Hire", href: "#services" },
-    { name: "Road Freight", href: "#services" },
-    { name: "Passenger Transport", href: "#services" },
-    { name: "Technical Consulting", href: "#services" },
+    { name: "Civil Engineering", href: "/services" },
+    { name: "Plant Hire", href: "/services" },
+    { name: "Road Freight", href: "/services" },
+    { name: "Passenger Transport", href: "/services" },
+    { name: "Technical Consulting", href: "/services" },
   ],
   company: [
-    { name: "About Us", href: "#about" },
-    { name: "Our Fleet", href: "#fleet" },
-    { name: "Contact", href: "#contact" },
+    { name: "About Us", href: "/about" },
+    { name: "Our Fleet", href: "/fleet" },
+    { name: "Projects", href: "/projects" },
+    { name: "Contact", href: "/contact" },
   ],
 };
 
@@ -60,12 +62,12 @@ export const Footer = () => {
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className="text-primary-foreground/70 hover:text-accent transition-colors"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -77,12 +79,12 @@ export const Footer = () => {
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className="text-primary-foreground/70 hover:text-accent transition-colors"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
