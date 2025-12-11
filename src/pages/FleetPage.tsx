@@ -6,6 +6,12 @@ import { Fleet } from "@/components/Fleet";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Wrench, Clock, CheckCircle, Phone, Award, Users } from "lucide-react";
 
+// Fleet images
+import fleetTrucks from "@/assets/fleet-trucks.jpg";
+import fleetTippers from "@/assets/fleet-tippers.jpg";
+import miningOperations from "@/assets/mining-operations.jpg";
+import miningSite from "@/assets/mining-site.jpg";
+
 const fleetFeatures = [
   {
     icon: Shield,
@@ -110,8 +116,76 @@ const FleetPage = () => {
           </div>
         </section>
 
-        {/* Fleet Features */}
+        {/* Fleet Gallery */}
         <section className="section-padding bg-background">
+          <div className="container-custom">
+            <div className="text-center mb-12">
+              <span className="text-accent font-semibold uppercase tracking-wider text-sm">
+                Our Equipment
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2">
+                Fleet Gallery
+              </h2>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="group relative overflow-hidden rounded-xl shadow-lg">
+                <img 
+                  src={fleetTrucks} 
+                  alt="STE truck fleet - Daewoo and Mercedes trucks" 
+                  className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                  <div>
+                    <h3 className="text-primary-foreground font-bold text-lg">Truck Fleet</h3>
+                    <p className="text-primary-foreground/80 text-sm">Modern trucks for all transport needs</p>
+                  </div>
+                </div>
+              </div>
+              <div className="group relative overflow-hidden rounded-xl shadow-lg">
+                <img 
+                  src={fleetTippers} 
+                  alt="STE side tipper trailers" 
+                  className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                  <div>
+                    <h3 className="text-primary-foreground font-bold text-lg">Side Tippers</h3>
+                    <p className="text-primary-foreground/80 text-sm">34-ton capacity for bulk materials</p>
+                  </div>
+                </div>
+              </div>
+              <div className="group relative overflow-hidden rounded-xl shadow-lg">
+                <img 
+                  src={miningOperations} 
+                  alt="STE equipment at mining operations" 
+                  className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                  <div>
+                    <h3 className="text-primary-foreground font-bold text-lg">Mining Operations</h3>
+                    <p className="text-primary-foreground/80 text-sm">Heavy-duty equipment for mining sites</p>
+                  </div>
+                </div>
+              </div>
+              <div className="group relative overflow-hidden rounded-xl shadow-lg">
+                <img 
+                  src={miningSite} 
+                  alt="STE fleet at mining stockpile" 
+                  className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                  <div>
+                    <h3 className="text-primary-foreground font-bold text-lg">Site Operations</h3>
+                    <p className="text-primary-foreground/80 text-sm">Fleet at work on active sites</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Fleet Features */}
+        <section className="section-padding bg-secondary">
           <div className="container-custom">
             <div className="text-center mb-12">
               <span className="text-accent font-semibold uppercase tracking-wider text-sm">

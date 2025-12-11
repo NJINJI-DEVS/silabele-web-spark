@@ -6,6 +6,14 @@ import { Testimonials } from "@/components/Testimonials";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Building, Pickaxe, Building2, Factory, MapPin, Calendar, CheckCircle, Users } from "lucide-react";
 
+// Project images
+import concreteWork from "@/assets/concrete-work.jpg";
+import roadConstruction from "@/assets/road-construction.jpg";
+import roadPaving from "@/assets/road-paving.jpg";
+import roadEquipment from "@/assets/road-equipment.jpg";
+import roadProgress from "@/assets/road-progress.jpg";
+import foundationWork from "@/assets/foundation-work.jpg";
+
 const clients = [
   { 
     name: "Glencore", 
@@ -207,8 +215,103 @@ const ProjectsPage = () => {
           </div>
         </section>
 
-        {/* Featured Projects */}
+        {/* Project Gallery */}
         <section className="section-padding bg-secondary">
+          <div className="container-custom">
+            <div className="text-center mb-12">
+              <span className="text-accent font-semibold uppercase tracking-wider text-sm">
+                Our Work
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2">Project Gallery</h2>
+              <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
+                See our teams in action across various construction and civil engineering projects.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+              <div className="group relative overflow-hidden rounded-xl shadow-lg">
+                <img 
+                  src={foundationWork} 
+                  alt="Foundation construction work" 
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                  <div>
+                    <h3 className="text-primary-foreground font-bold">Foundation Work</h3>
+                    <p className="text-primary-foreground/80 text-sm">Structural concrete foundations</p>
+                  </div>
+                </div>
+              </div>
+              <div className="group relative overflow-hidden rounded-xl shadow-lg">
+                <img 
+                  src={concreteWork} 
+                  alt="Concrete pouring on site" 
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                  <div>
+                    <h3 className="text-primary-foreground font-bold">Concrete Works</h3>
+                    <p className="text-primary-foreground/80 text-sm">Professional concrete placement</p>
+                  </div>
+                </div>
+              </div>
+              <div className="group relative overflow-hidden rounded-xl shadow-lg">
+                <img 
+                  src={roadConstruction} 
+                  alt="Road construction with roller and grader" 
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                  <div>
+                    <h3 className="text-primary-foreground font-bold">Road Construction</h3>
+                    <p className="text-primary-foreground/80 text-sm">Earthworks and grading</p>
+                  </div>
+                </div>
+              </div>
+              <div className="group relative overflow-hidden rounded-xl shadow-lg">
+                <img 
+                  src={roadPaving} 
+                  alt="Road paving equipment" 
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                  <div>
+                    <h3 className="text-primary-foreground font-bold">Road Surfacing</h3>
+                    <p className="text-primary-foreground/80 text-sm">Chip & spray operations</p>
+                  </div>
+                </div>
+              </div>
+              <div className="group relative overflow-hidden rounded-xl shadow-lg">
+                <img 
+                  src={roadEquipment} 
+                  alt="Road construction equipment in action" 
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                  <div>
+                    <h3 className="text-primary-foreground font-bold">Infrastructure Projects</h3>
+                    <p className="text-primary-foreground/80 text-sm">Civil engineering excellence</p>
+                  </div>
+                </div>
+              </div>
+              <div className="group relative overflow-hidden rounded-xl shadow-lg">
+                <img 
+                  src={roadProgress} 
+                  alt="Road construction progress" 
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                  <div>
+                    <h3 className="text-primary-foreground font-bold">Road Development</h3>
+                    <p className="text-primary-foreground/80 text-sm">Quality road infrastructure</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Featured Projects */}
+        <section className="section-padding bg-background">
           <div className="container-custom">
             <div className="text-center mb-12">
               <span className="text-accent font-semibold uppercase tracking-wider text-sm">
