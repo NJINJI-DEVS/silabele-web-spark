@@ -129,7 +129,21 @@ export const Footer = () => {
               © {new Date().getFullYear()} SILABELE Trading Enterprise. All rights
               reserved.
             </p>
-            <p>CIDB 7CE PE | 5GB PE Graded | NHBRC Registered</p>
+            <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
+              <p>CIDB 7CE PE | 5GB PE Graded | NHBRC Registered</p>
+              <span className="hidden md:inline">|</span>
+              <p>
+                Designed by{" "}
+                <a
+                  href="https://www.njinjicom.africa"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent hover:underline"
+                >
+                  NJINJICOM
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       </div>
