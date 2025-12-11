@@ -20,43 +20,21 @@ import catExcavator from "@/assets/cat-excavator.jpg";
 import steBrandedTrucks from "@/assets/ste-branded-trucks.jpg";
 import kitchenFinishes from "@/assets/kitchen-finishes.jpg";
 
+// Client logos
+import angloPlatinum from "@/assets/clients/anglo-platinum.jpeg";
+import glencore from "@/assets/clients/glencore.png";
+import impalaPlatinum from "@/assets/clients/impala-platinum.jpg";
+import moretele from "@/assets/clients/moretele.jpg";
+import pikitup from "@/assets/clients/pikitup.jpeg";
+import royalBafokeng from "@/assets/clients/royal-bafokeng.jpg";
+
 const clients = [
-  { 
-    name: "Glencore", 
-    sector: "Mining",
-    initials: "G",
-    color: "from-emerald-500 to-emerald-700",
-  },
-  { 
-    name: "Pikitup", 
-    sector: "Municipal",
-    initials: "PK",
-    color: "from-green-500 to-green-700",
-  },
-  { 
-    name: "Moretele Local Municipality", 
-    sector: "Government",
-    initials: "MLM",
-    color: "from-blue-500 to-blue-700",
-  },
-  { 
-    name: "Royal Bafokeng Holdings", 
-    sector: "Mining",
-    initials: "RBH",
-    color: "from-purple-500 to-purple-700",
-  },
-  { 
-    name: "Impala Platinum", 
-    sector: "Mining",
-    initials: "IP",
-    color: "from-slate-500 to-slate-700",
-  },
-  { 
-    name: "Anglo American Platinum", 
-    sector: "Mining",
-    initials: "AAP",
-    color: "from-red-500 to-red-700",
-  },
+  { name: "Glencore", sector: "Mining", logo: glencore },
+  { name: "Pikitup", sector: "Municipal", logo: pikitup },
+  { name: "Moretele Local Municipality", sector: "Government", logo: moretele },
+  { name: "Royal Bafokeng Holdings", sector: "Mining", logo: royalBafokeng },
+  { name: "Impala Platinum", sector: "Mining", logo: impalaPlatinum },
+  { name: "Anglo American Platinum", sector: "Mining", logo: angloPlatinum },
 ];
 
 const projects = [
@@ -206,10 +184,12 @@ const ProjectsPage = () => {
                   key={client.name}
                   className="group flex flex-col items-center gap-3 p-6 bg-card rounded-xl border border-border hover:border-accent/50 hover:shadow-lg transition-all duration-300"
                 >
-                  <div
-                    className={`w-16 h-16 rounded-full bg-gradient-to-br ${client.color} flex items-center justify-center text-white font-bold text-lg shadow-md group-hover:scale-110 transition-transform`}
-                  >
-                    {client.initials}
+                  <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow-md group-hover:scale-110 transition-transform overflow-hidden p-2">
+                    <img 
+                      src={client.logo} 
+                      alt={`${client.name} logo`}
+                      className="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                    />
                   </div>
                   <span className="text-foreground font-heading font-semibold text-sm text-center">
                     {client.name}
