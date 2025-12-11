@@ -6,6 +6,14 @@ import { Services } from "@/components/Services";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Phone, FileText, Cog, Truck, Users, ClipboardCheck } from "lucide-react";
 
+// Service images
+import asphaltPaving from "@/assets/asphalt-paving.jpg";
+import stormwaterDrainage from "@/assets/stormwater-drainage.jpg";
+import concretePouring from "@/assets/concrete-pouring.jpg";
+import industrialFoundation from "@/assets/industrial-foundation.jpg";
+import concreteFinishing from "@/assets/concrete-finishing.jpg";
+import completedRoad from "@/assets/completed-road.jpg";
+
 const processSteps = [
   {
     icon: Phone,
@@ -97,6 +105,100 @@ const ServicesPage = () => {
           subtitle="We serve public and private sector clients with a full suite of services that meet technical, regulatory, and logistical demands."
         />
         <Services showAll={true} showHeader={false} />
+
+        {/* Services Gallery */}
+        <section className="section-padding bg-secondary">
+          <div className="container-custom">
+            <div className="text-center mb-12">
+              <span className="text-accent font-semibold uppercase tracking-wider text-sm">
+                Our Work in Action
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2">
+                Service Gallery
+              </h2>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="group relative overflow-hidden rounded-xl shadow-lg">
+                <img 
+                  src={asphaltPaving} 
+                  alt="Asphalt paving works" 
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                  <div>
+                    <h3 className="text-primary-foreground font-bold">Asphalt Paving</h3>
+                    <p className="text-primary-foreground/80 text-sm">Road surfacing works</p>
+                  </div>
+                </div>
+              </div>
+              <div className="group relative overflow-hidden rounded-xl shadow-lg">
+                <img 
+                  src={stormwaterDrainage} 
+                  alt="Stormwater drainage construction" 
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                  <div>
+                    <h3 className="text-primary-foreground font-bold">Stormwater Systems</h3>
+                    <p className="text-primary-foreground/80 text-sm">Drainage infrastructure</p>
+                  </div>
+                </div>
+              </div>
+              <div className="group relative overflow-hidden rounded-xl shadow-lg">
+                <img 
+                  src={concretePouring} 
+                  alt="Concrete pouring operations" 
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                  <div>
+                    <h3 className="text-primary-foreground font-bold">Concrete Works</h3>
+                    <p className="text-primary-foreground/80 text-sm">Foundation construction</p>
+                  </div>
+                </div>
+              </div>
+              <div className="group relative overflow-hidden rounded-xl shadow-lg">
+                <img 
+                  src={industrialFoundation} 
+                  alt="Industrial foundation construction" 
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                  <div>
+                    <h3 className="text-primary-foreground font-bold">Industrial Projects</h3>
+                    <p className="text-primary-foreground/80 text-sm">Large-scale foundations</p>
+                  </div>
+                </div>
+              </div>
+              <div className="group relative overflow-hidden rounded-xl shadow-lg">
+                <img 
+                  src={concreteFinishing} 
+                  alt="Concrete finishing work" 
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                  <div>
+                    <h3 className="text-primary-foreground font-bold">Concrete Finishing</h3>
+                    <p className="text-primary-foreground/80 text-sm">Quality surface finishes</p>
+                  </div>
+                </div>
+              </div>
+              <div className="group relative overflow-hidden rounded-xl shadow-lg">
+                <img 
+                  src={completedRoad} 
+                  alt="Completed road project" 
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                  <div>
+                    <h3 className="text-primary-foreground font-bold">Completed Roads</h3>
+                    <p className="text-primary-foreground/80 text-sm">Quality road infrastructure</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Service Details */}
         <section className="section-padding bg-background">

@@ -8,6 +8,10 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Award, Users, Handshake, Clock, Cog } from "lucide-react";
 
+// Team images
+import teamPhoto from "@/assets/team-photo.jpg";
+import teamPhoto2 from "@/assets/team-photo-2.jpg";
+
 const timeline = [
   {
     year: "2009",
@@ -148,7 +152,7 @@ const AboutPage = () => {
           </div>
         </section>
 
-        {/* Leadership */}
+        {/* Our Team */}
         <section className="section-padding bg-background">
           <div className="container-custom">
             <div className="text-center mb-12">
@@ -156,12 +160,42 @@ const AboutPage = () => {
                 Our Team
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2">
-                Leadership & Expertise
+                The People Behind Our Success
               </h2>
               <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-                A family-led business with hands-on leadership ensuring quality at every level.
+                A dedicated workforce committed to excellence, safety, and delivering quality results on every project.
               </p>
             </div>
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div className="group relative overflow-hidden rounded-2xl shadow-xl">
+                <img 
+                  src={teamPhoto} 
+                  alt="STE team members at project site" 
+                  className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent flex items-end p-8">
+                  <div>
+                    <h3 className="text-primary-foreground font-bold text-xl">Our Dedicated Team</h3>
+                    <p className="text-primary-foreground/80">50+ skilled professionals across all divisions</p>
+                  </div>
+                </div>
+              </div>
+              <div className="group relative overflow-hidden rounded-2xl shadow-xl">
+                <img 
+                  src={teamPhoto2} 
+                  alt="STE construction team" 
+                  className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent flex items-end p-8">
+                  <div>
+                    <h3 className="text-primary-foreground font-bold text-xl">Safety First Culture</h3>
+                    <p className="text-primary-foreground/80">Certified operators with mine-compliant training</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Leadership Cards */}
             <div className="grid md:grid-cols-3 gap-8">
               {leadership.map((leader, index) => (
                 <div
