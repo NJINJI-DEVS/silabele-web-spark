@@ -4,36 +4,37 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 
+import glencoreLogo from "@/assets/clients/glencore.png";
+import pikitupLogo from "@/assets/clients/pikitup.jpeg";
+import moreteleLogo from "@/assets/clients/moretele.jpg";
+import royalBafokengLogo from "@/assets/clients/royal-bafokeng.jpg";
+import impalaPlatinumLogo from "@/assets/clients/impala-platinum.jpg";
+import angloPlatinumLogo from "@/assets/clients/anglo-platinum.jpeg";
+
 const clients = [
   {
     name: "Glencore",
-    initials: "G",
-    color: "from-emerald-500 to-emerald-700",
+    logo: glencoreLogo,
   },
   {
     name: "Pikitup",
-    initials: "PK",
-    color: "from-green-500 to-green-700",
+    logo: pikitupLogo,
   },
   {
     name: "Moretele Local Municipality",
-    initials: "MLM",
-    color: "from-blue-500 to-blue-700",
+    logo: moreteleLogo,
   },
   {
     name: "Royal Bafokeng Holdings",
-    initials: "RBH",
-    color: "from-purple-500 to-purple-700",
+    logo: royalBafokengLogo,
   },
   {
     name: "Impala Platinum",
-    initials: "IP",
-    color: "from-slate-500 to-slate-700",
+    logo: impalaPlatinumLogo,
   },
   {
     name: "Anglo American Platinum",
-    initials: "AAP",
-    color: "from-red-500 to-red-700",
+    logo: angloPlatinumLogo,
   },
 ];
 
@@ -51,20 +52,17 @@ export const Clients = () => {
         </div>
 
         {/* Desktop Grid */}
-        <div className="hidden md:flex flex-wrap justify-center items-center gap-6 lg:gap-8">
+        <div className="hidden md:flex flex-wrap justify-center items-center gap-8 lg:gap-12">
           {clients.map((client) => (
             <div
               key={client.name}
-              className="group flex flex-col items-center gap-3 p-6 bg-card rounded-xl border border-border hover:border-accent/50 hover:shadow-lg transition-all duration-300"
+              className="group flex items-center justify-center p-6 bg-card rounded-xl border border-border hover:border-accent/50 hover:shadow-lg transition-all duration-300 h-24 w-48"
             >
-              <div
-                className={`w-16 h-16 rounded-full bg-gradient-to-br ${client.color} flex items-center justify-center text-white font-bold text-lg shadow-md group-hover:scale-110 transition-transform`}
-              >
-                {client.initials}
-              </div>
-              <span className="text-foreground font-heading font-semibold text-sm text-center max-w-[120px]">
-                {client.name}
-              </span>
+              <img
+                src={client.logo}
+                alt={`${client.name} logo`}
+                className="max-h-16 max-w-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+              />
             </div>
           ))}
         </div>
@@ -81,15 +79,12 @@ export const Clients = () => {
             <CarouselContent className="-ml-2">
               {clients.map((client) => (
                 <CarouselItem key={client.name} className="pl-2 basis-1/2">
-                  <div className="flex flex-col items-center gap-3 p-4 bg-card rounded-xl border border-border">
-                    <div
-                      className={`w-14 h-14 rounded-full bg-gradient-to-br ${client.color} flex items-center justify-center text-white font-bold text-sm shadow-md`}
-                    >
-                      {client.initials}
-                    </div>
-                    <span className="text-foreground font-heading font-semibold text-xs text-center">
-                      {client.name}
-                    </span>
+                  <div className="flex items-center justify-center p-4 bg-card rounded-xl border border-border h-20">
+                    <img
+                      src={client.logo}
+                      alt={`${client.name} logo`}
+                      className="max-h-12 max-w-full object-contain"
+                    />
                   </div>
                 </CarouselItem>
               ))}
