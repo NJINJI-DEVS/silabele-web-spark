@@ -13,6 +13,12 @@ import roadPaving from "@/assets/road-paving.jpg";
 import roadEquipment from "@/assets/road-equipment.jpg";
 import roadProgress from "@/assets/road-progress.jpg";
 import foundationWork from "@/assets/foundation-work.jpg";
+import aerialConstruction from "@/assets/aerial-construction.jpg";
+import completedBuilding from "@/assets/completed-building.jpg";
+import industrialBuilding from "@/assets/industrial-building.jpg";
+import catExcavator from "@/assets/cat-excavator.jpg";
+import steBrandedTrucks from "@/assets/ste-branded-trucks.jpg";
+import kitchenFinishes from "@/assets/kitchen-finishes.jpg";
 
 const clients = [
   { 
@@ -303,6 +309,84 @@ const ProjectsPage = () => {
                   <div>
                     <h3 className="text-primary-foreground font-bold">Road Development</h3>
                     <p className="text-primary-foreground/80 text-sm">Quality road infrastructure</p>
+                  </div>
+                </div>
+              </div>
+              <div className="group relative overflow-hidden rounded-xl shadow-lg">
+                <img 
+                  src={aerialConstruction} 
+                  alt="Aerial view of construction site" 
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                  <div>
+                    <h3 className="text-primary-foreground font-bold">Site Operations</h3>
+                    <p className="text-primary-foreground/80 text-sm">Large-scale concrete works</p>
+                  </div>
+                </div>
+              </div>
+              <div className="group relative overflow-hidden rounded-xl shadow-lg">
+                <img 
+                  src={completedBuilding} 
+                  alt="Completed building project" 
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                  <div>
+                    <h3 className="text-primary-foreground font-bold">Completed Buildings</h3>
+                    <p className="text-primary-foreground/80 text-sm">Turnkey construction projects</p>
+                  </div>
+                </div>
+              </div>
+              <div className="group relative overflow-hidden rounded-xl shadow-lg">
+                <img 
+                  src={industrialBuilding} 
+                  alt="Industrial building construction" 
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                  <div>
+                    <h3 className="text-primary-foreground font-bold">Industrial Buildings</h3>
+                    <p className="text-primary-foreground/80 text-sm">Commercial construction</p>
+                  </div>
+                </div>
+              </div>
+              <div className="group relative overflow-hidden rounded-xl shadow-lg">
+                <img 
+                  src={catExcavator} 
+                  alt="CAT excavator at work" 
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                  <div>
+                    <h3 className="text-primary-foreground font-bold">Earthmoving</h3>
+                    <p className="text-primary-foreground/80 text-sm">Heavy equipment operations</p>
+                  </div>
+                </div>
+              </div>
+              <div className="group relative overflow-hidden rounded-xl shadow-lg">
+                <img 
+                  src={steBrandedTrucks} 
+                  alt="STE branded tipper trucks" 
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                  <div>
+                    <h3 className="text-primary-foreground font-bold">Materials Transport</h3>
+                    <p className="text-primary-foreground/80 text-sm">STE-branded fleet</p>
+                  </div>
+                </div>
+              </div>
+              <div className="group relative overflow-hidden rounded-xl shadow-lg">
+                <img 
+                  src={kitchenFinishes} 
+                  alt="Interior finishing work" 
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                  <div>
+                    <h3 className="text-primary-foreground font-bold">Interior Finishes</h3>
+                    <p className="text-primary-foreground/80 text-sm">Quality interior works</p>
                   </div>
                 </div>
               </div>
