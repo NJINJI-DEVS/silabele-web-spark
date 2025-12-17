@@ -184,7 +184,7 @@ const ProjectsPage = () => {
                   key={client.name}
                   className="group flex flex-col items-center gap-3 p-6 bg-card rounded-xl border border-border hover:border-accent/50 hover:shadow-lg transition-all duration-300"
                 >
-                  <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow-md group-hover:scale-110 transition-transform overflow-hidden p-2">
+                  <div className="w-20 h-20 rounded-full bg-background/50 flex items-center justify-center group-hover:scale-110 transition-transform overflow-hidden p-2">
                     <img 
                       src={client.logo} 
                       alt={`${client.name} logo`}
