@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Linkedin, Facebook, Instagram } from "lucide-react";
-import logo from "@/assets/logo.jpg";
+import logo from "@/assets/silabele-logo.png";
 
 const footerLinks = {
   services: [
@@ -35,7 +35,7 @@ export const Footer = () => {
             <img
               src={logo}
               alt="SILABELE Trading Enterprise"
-              className="h-16 w-auto mb-6 bg-primary-foreground rounded p-2"
+              className="h-16 w-auto mb-6 brightness-0 invert"
             />
             <p className="text-primary-foreground/80 mb-6 leading-relaxed">
               100% Black-owned, family-led infrastructure and logistics company
