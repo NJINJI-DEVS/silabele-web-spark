@@ -20,27 +20,16 @@ export const Hero = () => {
       <div className="relative z-10 container-custom text-center md:text-left py-32">
         <div className="max-w-3xl">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-accent/20 backdrop-blur-sm text-primary-foreground px-4 py-2 rounded-full mb-6 animate-fade-in-up">
-            <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-            <span className="text-sm font-medium">Built on Trust. Powered by Purpose.</span>
-          </div>
-
           {/* Headline */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground leading-tight mb-6 animate-fade-in-up animation-delay-100">
-            Reliable Infrastructure & Logistics{" "}
-            <span className="text-accent">Solutions</span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground leading-tight mb-6 animate-fade-in-up">
+            Experts in Prompt and{" "}
+            <span className="text-accent">Quality Service</span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-2xl animate-fade-in-up animation-delay-200">
-            We deliver plant hire, construction, logistics, and transport services
-            with the speed, safety, and precision our clients rely on — from mining
-            sites to public sector projects across South Africa.
-          </p>
-
-          {/* Tagline */}
-          <p className="text-2xl font-heading font-bold text-accent mb-8 animate-fade-in-up animation-delay-300">
-            Prompt. Professional. Proven.
+          <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-2xl animate-fade-in-up animation-delay-100">
+            Reliable transport logistics and construction solutions for mining, 
+            government, and private sector projects across South Africa.
           </p>
 
           {/* CTA Buttons */}

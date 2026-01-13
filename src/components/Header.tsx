@@ -43,11 +43,11 @@ export const Header = () => {
           <div className="flex items-center gap-6">
             <a href="tel:0861555058" className="flex items-center gap-2 hover:text-accent transition-colors">
               <Phone className="h-4 w-4" />
-              <span>0861 555 058</span>
+              <span>0861-555-058</span>
             </a>
-            <a href="mailto:bsilabele@silabele.com" className="flex items-center gap-2 hover:text-accent transition-colors">
+            <a href="mailto:info@silabele.com" className="flex items-center gap-2 hover:text-accent transition-colors">
               <Mail className="h-4 w-4" />
-              <span>bsilabele@silabele.com</span>
+              <span>info@silabele.com</span>
             </a>
           </div>
           <div className="text-sm opacity-90">

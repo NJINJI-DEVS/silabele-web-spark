@@ -4,38 +4,33 @@ import { Button } from "@/components/ui/button";
 
 const fleetItems = [
   {
-    category: "Earthmoving",
-    items: ["TLBs", "Excavators", "Rollers", "Compactors"],
+    category: "Bulk Transport Vehicles",
+    items: ["10m³ Tipper Trucks", "34-Ton Side Tippers", "Superlinks"],
     color: "bg-accent",
   },
   {
-    category: "Tipper Trucks",
-    items: ["10m³ Tipper Trucks", "34-Ton Superlink Tippers"],
+    category: "Construction & Earthmoving Equipment",
+    items: ["TLBs", "Excavators", "Rollers", "Compactors", "Graders"],
     color: "bg-primary",
   },
   {
-    category: "Water & Fuel",
-    items: ["Water Trucks / Bowsers", "Diesel Bowsers"],
+    category: "Passenger Transport Vehicles",
+    items: ["22-Seater Mine-Spec Buses", "Executive Vehicles"],
     color: "bg-accent",
   },
   {
-    category: "Transport",
-    items: ["22-Seater Mine-Spec Buses", "4-Ton Dropside LDVs", "Executive Vehicles"],
+    category: "Support Fleet",
+    items: ["Water Bowsers", "Diesel Bowsers", "Low-bed Trailers"],
     color: "bg-primary",
-  },
-  {
-    category: "Support Equipment",
-    items: ["Heavy-Duty Scaffolding", "Industrial Tools"],
-    color: "bg-accent",
   },
 ];
 
 const features = [
   "Mine-compliant & safety certified",
   "Fully maintained fleet",
-  "Skilled & certified operators",
+  "Safety audited",
+  "Operator supported",
   "Short turnaround times",
-  "24/7 breakdown support",
   "Competitive rates",
 ];
 

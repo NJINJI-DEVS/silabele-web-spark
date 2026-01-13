@@ -11,63 +11,63 @@ import { Button } from "@/components/ui/button";
 
 const services = [
   {
-    icon: Building2,
-    title: "Civil Engineering & General Building",
+    icon: Truck,
+    title: "Bulk Transport Logistics",
     description:
-      "From bulk earthworks to public infrastructure development, our construction team delivers safely and efficiently—CIDB 7CE PE and 5GB PE graded, NHBRC registered.",
+      "Mining-focused bulk transportation with reliable, compliant, and scheduled haulage services using our modern fleet of side tippers and trucks.",
     features: [
-      "Bulk earthworks",
-      "Road construction & maintenance",
-      "Building works",
+      "Mining bulk transportation",
+      "Side tippers (10m³, 34-ton)",
+      "Reliable scheduled haulage",
+      "Compliant operations",
+    ],
+  },
+  {
+    icon: Building2,
+    title: "Construction Services",
+    description:
+      "Civil engineering and general building services including roadworks, infrastructure development, and site preparation—CIDB 7CE and 5GB graded.",
+    features: [
+      "Civil Engineering",
+      "General Building",
+      "Roadworks & asphalt",
       "Site preparation",
     ],
   },
   {
     icon: HardHat,
-    title: "Plant Hire",
+    title: "Plant & Equipment Hire",
     description:
-      "Own fleet. Fully maintained. Site-ready. Our yellow metal and support fleet includes TLBs, tippers, superlinks, rollers, water bowsers, and more.",
+      "Own fleet. Fully maintained. Site-ready. Our equipment includes TLBs, excavators, rollers, compactors, water bowsers, and more.",
     features: [
-      "TLBs & Excavators",
-      "10m³ Tipper Trucks",
-      "34-Ton Superlinks",
-      "Skilled Operators",
-    ],
-  },
-  {
-    icon: Truck,
-    title: "Road Freight & Logistics",
-    description:
-      "We handle heavy haulage with precision. Our trucks and diesel bowsers support mining, municipal, and commercial logistics across regions.",
-    features: [
-      "Heavy-duty haulage",
-      "Materials transport",
-      "Mine-to-plant logistics",
-      "Waste transportation",
+      "TLBs",
+      "Excavators",
+      "Rollers",
+      "Compactors",
     ],
   },
   {
     icon: Bus,
-    title: "Passenger Transport (Mine-Spec)",
+    title: "Executive Shuttles",
     description:
-      "Our 22-seater mine-compliant vehicles support staff transport and long-distance travel for site crews, corporate groups, and event logistics.",
+      "Our 22-seater mine-compliant vehicles and executive transport support staff transport and long-distance travel for site crews and corporate groups.",
     features: [
       "22-seater mine buses",
       "Executive transport",
-      "Airport transfers",
+      "Staff transportation",
       "Professional drivers",
     ],
   },
   {
     icon: Settings,
-    title: "Technical Consulting",
+    title: "Technical Support Consulting",
     description:
-      "Clients benefit from expert advisory built into our service offering—on-site planning, fleet optimization, and project problem-solving.",
+      "Expert project advisory and infrastructure and logistics support built into our service offering—on-site planning and project problem-solving.",
     features: [
-      "On-site assessment",
-      "Fleet optimization",
-      "Cost-saving strategies",
-      "Safety alignment",
+      "Project advisory",
+      "Infrastructure support",
+      "Logistics support",
+      "On-site planning",
     ],
   },
 ];

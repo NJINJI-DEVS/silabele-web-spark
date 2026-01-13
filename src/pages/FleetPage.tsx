@@ -20,17 +20,17 @@ const fleetFeatures = [
   },
   {
     icon: Wrench,
-    title: "Well Maintained",
+    title: "Fully Maintained",
     description: "Regular servicing and maintenance ensures maximum uptime and reliability.",
   },
   {
     icon: Clock,
-    title: "Available 24/7",
-    description: "Round-the-clock availability for emergency and critical project needs.",
+    title: "Safety Audited",
+    description: "Regular safety audits and compliance certifications across all equipment.",
   },
   {
     icon: Users,
-    title: "Skilled Operators",
+    title: "Operator Supported",
     description: "Experienced and certified operators available with equipment hire.",
   },
 ];
@@ -44,46 +44,37 @@ const fleetStats = [
 
 const equipmentCategories = [
   {
-    category: "Earthmoving Equipment",
+    category: "Bulk Transport Vehicles",
     items: [
-      { name: "Excavators", specs: "Various sizes from 8-ton to 45-ton" },
-      { name: "Front-end Loaders", specs: "Wheel loaders for material handling" },
+      { name: "Side Tippers", specs: "10m³ and 34-ton capacity for bulk materials" },
+      { name: "Superlinks", specs: "For high-volume transport operations" },
+      { name: "End Tippers", specs: "For precise material placement" },
+    ],
+  },
+  {
+    category: "Construction & Earthmoving Equipment",
+    items: [
       { name: "TLBs", specs: "Tractor-Loader-Backhoes for versatile operations" },
+      { name: "Excavators", specs: "Various sizes from 8-ton to 45-ton" },
+      { name: "Rollers", specs: "Soil and asphalt compaction" },
+      { name: "Compactors", specs: "Ground preparation and finishing" },
       { name: "Graders", specs: "Motor graders for road construction" },
     ],
   },
   {
-    category: "Tipper Trucks",
-    items: [
-      { name: "Side Tippers", specs: "34-ton capacity for bulk materials" },
-      { name: "End Tippers", specs: "For precise material placement" },
-      { name: "Link Trucks", specs: "For high-volume transport operations" },
-    ],
-  },
-  {
-    category: "Support Equipment",
-    items: [
-      { name: "Water Bowsers", specs: "Dust suppression and water delivery" },
-      { name: "Compactors", specs: "Soil and asphalt compaction" },
-      { name: "Low-bed Trailers", specs: "Equipment transportation" },
-    ],
-  },
-  {
-    category: "Passenger Vehicles",
+    category: "Passenger Transport Vehicles",
     items: [
       { name: "22-Seater Buses", specs: "Mine-compliant crew transport" },
-      { name: "Minibuses", specs: "Smaller group transportation" },
+      { name: "Executive Vehicles", specs: "Corporate and VIP transportation" },
     ],
   },
 ];
 
 const maintenanceProcess = [
-  "Daily pre-trip inspections by trained operators",
-  "Weekly safety and mechanical checks",
-  "Monthly comprehensive servicing",
-  "Quarterly major component inspections",
-  "Annual compliance certifications",
-  "Real-time GPS tracking and monitoring",
+  "Daily inspections by trained operators",
+  "Weekly safety checks",
+  "Scheduled servicing",
+  "Compliance certifications",
 ];
 
 const FleetPage = () => {
@@ -322,9 +313,9 @@ const FleetPage = () => {
                 </Link>
               </Button>
               <Button variant="outline" size="xl" className="bg-transparent border-accent-foreground text-accent-foreground hover:bg-accent-foreground/10" asChild>
-                <a href="tel:+27123456789">
+                <a href="tel:0861555058">
                   <Phone className="mr-2 h-5 w-5" />
-                  Call Us Now
+                  0861-555-058
                 </a>
               </Button>
             </div>

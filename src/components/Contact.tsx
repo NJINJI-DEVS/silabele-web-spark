@@ -10,31 +10,33 @@ const contactInfo = [
     icon: MapPin,
     label: "Address",
     value: "155 Ramogotsi Section, Chaneng Village, Rustenburg, North West, 0310",
+    note: "By appointment only",
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "0861 555 058",
+    value: "0861-555-058",
     href: "tel:0861555058",
   },
   {
     icon: Mail,
     label: "Email",
-    value: "bsilabele@silabele.com",
-    href: "mailto:bsilabele@silabele.com",
+    value: "info@silabele.com",
+    href: "mailto:info@silabele.com",
   },
   {
     icon: Clock,
     label: "Hours",
-    value: "Mon - Fri: 7:00 AM - 5:00 PM",
+    value: "Monday – Friday: 08:00 – 16:30",
+    note: "Closed: Weekends & Public Holidays",
   },
 ];
 
 const serviceOptions = [
-  "Civil Engineering & Construction",
-  "Plant Hire",
-  "Road Freight & Logistics",
-  "Passenger Transport",
+  "Bulk Transport Logistics",
+  "Construction Services",
+  "Plant & Equipment Hire",
+  "Executive Shuttles",
   "Technical Consulting",
   "General Inquiry",
 ];
@@ -217,24 +219,13 @@ export const Contact = () => {
                       ) : (
                         <p className="text-foreground font-medium">{info.value}</p>
                       )}
+                      {info.note && (
+                        <p className="text-sm text-muted-foreground mt-1">{info.note}</p>
+                      )}
                     </div>
                   </div>
                 ))}
               </div>
-            </div>
-
-            {/* Map Placeholder */}
-            <div className="bg-card rounded-xl shadow-lg overflow-hidden border border-border h-64">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3585.2401254!2d27.0!3d-25.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDQyJzAwLjAiUyAyN8KwMDAnMDAuMCJF!5e0!3m2!1sen!2sza!4v1234567890"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="SILABELE Trading Enterprise Location"
-              />
             </div>
           </div>
         </div>

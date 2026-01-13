@@ -12,44 +12,10 @@ import { ArrowRight, Shield, Award, Users, Handshake, Clock, Cog } from "lucide-
 import teamPhoto from "@/assets/team-photo.jpg";
 import teamPhoto2 from "@/assets/team-photo-2.jpg";
 
-const timeline = [
-  {
-    year: "2009",
-    title: "Company Founded",
-    description: "SILABELE TRADING ENTERPRISE established in Chaneng Village with a small fleet operation.",
-  },
-  {
-    year: "2012",
-    title: "Fleet Expansion",
-    description: "Expanded fleet to include earthmoving equipment and tipper trucks for mining sector.",
-  },
-  {
-    year: "2015",
-    title: "Major Contracts",
-    description: "Secured contracts with major mining houses including Impala Platinum and Anglo American.",
-  },
-  {
-    year: "2018",
-    title: "CIDB Grading",
-    description: "Achieved CIDB 7CE PE grading, enabling participation in larger government projects.",
-  },
-  {
-    year: "2021",
-    title: "Service Diversification",
-    description: "Expanded into technical consulting and passenger transport services.",
-  },
-  {
-    year: "2024",
-    title: "Continued Growth",
-    description: "Operating 100+ fleet vehicles with 50+ dedicated team members across South Africa.",
-  },
-];
-
 const certifications = [
-  { icon: Shield, title: "BBBEE Level 1", description: "Broad-Based Black Economic Empowerment" },
-  { icon: Award, title: "CIDB 7CE PE", description: "Construction Industry Development Board" },
-  { icon: Cog, title: "ISO 9001:2015", description: "Quality Management Certified" },
-  { icon: Users, title: "100% Black-Owned", description: "Family-led Enterprise" },
+  { icon: Shield, title: "100% Black-Owned", description: "Family-led Enterprise" },
+  { icon: Award, title: "CIDB 7CE", description: "Civil Engineering Grading" },
+  { icon: Cog, title: "CIDB 5GB", description: "General Building Grading" },
 ];
 
 const leadership = [
@@ -79,45 +45,6 @@ const AboutPage = () => {
         />
         <About showFull={true} />
 
-        {/* Company Timeline */}
-        <section className="section-padding bg-background">
-          <div className="container-custom">
-            <div className="text-center mb-12">
-              <span className="text-accent font-semibold uppercase tracking-wider text-sm">
-                Our Journey
-              </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2">
-                15+ Years of Excellence
-              </h2>
-            </div>
-            <div className="relative">
-              {/* Timeline Line */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-border hidden md:block" />
-              
-              <div className="space-y-8">
-                {timeline.map((item, index) => (
-                  <div
-                    key={item.year}
-                    className={`flex flex-col md:flex-row items-center gap-4 md:gap-8 ${
-                      index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                    }`}
-                  >
-                    <div className={`flex-1 ${index % 2 === 0 ? "md:text-right" : "md:text-left"}`}>
-                      <div className="bg-card p-6 rounded-xl border border-border shadow-md">
-                        <span className="text-accent font-bold text-lg">{item.year}</span>
-                        <h3 className="font-bold text-foreground mt-1">{item.title}</h3>
-                        <p className="text-muted-foreground mt-2">{item.description}</p>
-                      </div>
-                    </div>
-                    <div className="w-4 h-4 rounded-full bg-accent flex-shrink-0 z-10 hidden md:block" />
-                    <div className="flex-1 hidden md:block" />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Stats Section */}
         <Stats />
 
@@ -135,7 +62,7 @@ const AboutPage = () => {
                 We maintain the highest standards of compliance and certification in the industry.
               </p>
             </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid sm:grid-cols-3 gap-6">
               {certifications.map((cert) => (
                 <div
                   key={cert.title}

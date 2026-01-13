@@ -2,44 +2,36 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHeader } from "@/components/PageHeader";
 import { Contact } from "@/components/Contact";
-import { Clock, Phone, Mail, MapPin, MessageSquare, CheckCircle } from "lucide-react";
+import { Clock, Phone, Mail, MapPin, CheckCircle } from "lucide-react";
 
 const contactMethods = [
   {
     icon: Phone,
     title: "Call Us",
     description: "Speak directly with our team",
-    value: "+27 12 345 6789",
-    action: "tel:+27123456789",
+    value: "0861-555-058",
+    action: "tel:0861555058",
   },
   {
     icon: Mail,
     title: "Email Us",
     description: "Send us a detailed inquiry",
-    value: "info@silabele.co.za",
-    action: "mailto:info@silabele.co.za",
-  },
-  {
-    icon: MessageSquare,
-    title: "WhatsApp",
-    description: "Quick response on WhatsApp",
-    value: "+27 12 345 6789",
-    action: "https://wa.me/27123456789",
+    value: "info@silabele.com",
+    action: "mailto:info@silabele.com",
   },
   {
     icon: MapPin,
-    title: "Visit Us",
-    description: "Our office location",
+    title: "Make an Appointment",
+    description: "Office visits by appointment only",
     value: "Chaneng Village, North West",
-    action: "#map",
+    action: "/contact#contact",
   },
 ];
 
 const officeHours = [
-  { day: "Monday - Friday", hours: "07:00 - 17:00" },
-  { day: "Saturday", hours: "08:00 - 13:00" },
-  { day: "Sunday", hours: "Closed" },
-  { day: "Public Holidays", hours: "Emergency calls only" },
+  { day: "Monday – Friday", hours: "08:00 – 16:30" },
+  { day: "Weekends", hours: "Closed" },
+  { day: "Public Holidays", hours: "Closed" },
 ];
 
 const faqs = [
@@ -92,7 +84,7 @@ const ContactPage = () => {
         {/* Quick Contact Methods */}
         <section className="py-12 bg-secondary">
           <div className="container-custom">
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid sm:grid-cols-3 gap-6">
               {contactMethods.map((method) => (
                 <a
                   key={method.title}
@@ -186,21 +178,21 @@ const ContactPage = () => {
           </div>
         </section>
 
-        {/* Emergency Contact */}
+        {/* CTA Section */}
         <section className="py-12 bg-primary">
           <div className="container-custom text-center">
             <h2 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-4">
-              Need Urgent Assistance?
+              Ready to Discuss Your Project?
             </h2>
             <p className="text-primary-foreground/90 mb-6">
-              Our emergency hotline is available 24/7 for critical project needs.
+              Call us during office hours or send us an email anytime.
             </p>
             <a
-              href="tel:+27123456789"
+              href="tel:0861555058"
               className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-8 py-4 rounded-lg font-bold text-lg hover:bg-accent/90 transition-colors"
             >
               <Phone className="h-6 w-6" />
-              Call Emergency Hotline
+              0861-555-058
             </a>
           </div>
         </section>

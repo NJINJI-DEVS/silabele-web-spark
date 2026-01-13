@@ -42,12 +42,12 @@ const Index = () => {
                 </p>
                 <ul className="space-y-4">
                   {[
-                    "Fully compliant with BBBEE Level 1 certification",
-                    "ISO 9001:2015 quality management certified",
-                    "24/7 emergency response capabilities",
+                    "15+ years of industry experience",
+                    "200+ completed projects",
+                    "Multi-sector delivery: Mining, Government, Private",
+                    "100% Black-Owned, family-led enterprise",
+                    "CIDB 7CE and 5GB graded",
                     "Comprehensive fleet maintenance program",
-                    "Experienced and trained workforce",
-                    "Competitive and transparent pricing",
                   ].map((item, index) => (
                     <li key={index} className="flex items-start gap-3">
                       <CheckCircle className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
@@ -71,9 +71,9 @@ const Index = () => {
                     </Link>
                   </Button>
                   <Button variant="outline" size="xl" className="w-full" asChild>
-                    <a href="tel:+27123456789">
+                    <a href="tel:0861555058">
                       <Phone className="mr-2 h-5 w-5" />
-                      Call Us Now
+                      0861-555-058
                     </a>
                   </Button>
                 </div>
