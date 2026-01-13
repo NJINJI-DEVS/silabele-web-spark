@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 import { PageHeader } from "@/components/PageHeader";
 import { Testimonials } from "@/components/Testimonials";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Building, Pickaxe, Building2, Factory, MapPin, Calendar, CheckCircle, Users } from "lucide-react";
+import { ArrowRight, Building, Pickaxe, Building2, Factory, Users } from "lucide-react";
 
 // Project images
 import concreteWork from "@/assets/concrete-work.jpg";
@@ -310,70 +310,6 @@ const ProjectsPage = () => {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Featured Projects */}
-        <section className="section-padding bg-background">
-          <div className="container-custom">
-            <div className="text-center mb-12">
-              <span className="text-accent font-semibold uppercase tracking-wider text-sm">
-                Case Studies
-              </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2">Featured Projects</h2>
-              <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-                Delivering excellence across multiple sectors with measurable results.
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {projects.map((project) => (
-                <article
-                  key={project.title}
-                  className="bg-card rounded-xl shadow-md border border-border overflow-hidden hover:shadow-lg transition-shadow"
-                >
-                  <div className="bg-primary/10 p-4">
-                    <span className="text-sm text-accent font-semibold">{project.client}</span>
-                    <h3 className="text-lg font-bold text-foreground mt-1">{project.title}</h3>
-                  </div>
-                  <div className="p-6">
-                    <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mb-4">
-                      <span className="flex items-center gap-1">
-                        <MapPin className="h-4 w-4" />
-                        {project.location}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <Calendar className="h-4 w-4" />
-                        {project.duration}
-                      </span>
-                    </div>
-                    <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
-                    <div className="space-y-3">
-                      <div className="flex flex-wrap gap-2">
-                        {project.services.map((service) => (
-                          <span
-                            key={service}
-                            className="bg-accent/10 text-accent px-2 py-1 rounded text-xs font-medium"
-                          >
-                            {service}
-                          </span>
-                        ))}
-                      </div>
-                      <div className="border-t border-border pt-3">
-                        {project.highlights.map((highlight) => (
-                          <span
-                            key={highlight}
-                            className="inline-flex items-center gap-1 text-xs text-foreground mr-3"
-                          >
-                            <CheckCircle className="h-3 w-3 text-accent" />
-                            {highlight}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              ))}
             </div>
           </div>
         </section>
