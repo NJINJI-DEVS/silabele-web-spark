@@ -21,20 +21,18 @@ import steBrandedTrucks from "@/assets/ste-branded-trucks.jpg";
 import kitchenFinishes from "@/assets/kitchen-finishes.jpg";
 
 // Client logos
-import angloPlatinum from "@/assets/clients/anglo-platinum.jpeg";
 import glencore from "@/assets/clients/glencore.png";
 import impalaPlatinum from "@/assets/clients/impala-platinum.jpg";
-import moretele from "@/assets/clients/moretele.jpg";
 import pikitup from "@/assets/clients/pikitup.jpeg";
 import royalBafokeng from "@/assets/clients/royal-bafokeng.jpg";
+import groupFive from "@/assets/clients/group-five.png";
 
 const clients = [
   { name: "Glencore", sector: "Mining", logo: glencore },
   { name: "Pikitup", sector: "Municipal", logo: pikitup },
-  { name: "Moretele Local Municipality", sector: "Government", logo: moretele },
   { name: "Royal Bafokeng Holdings", sector: "Mining", logo: royalBafokeng },
   { name: "Impala Platinum", sector: "Mining", logo: impalaPlatinum },
-  { name: "Anglo American Platinum", sector: "Mining", logo: angloPlatinum },
+  { name: "Group Five", sector: "Construction", logo: groupFive },
 ];
 
 const sectors = [
