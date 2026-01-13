@@ -6,10 +6,9 @@ import {
 
 import glencoreLogo from "@/assets/clients/glencore.png";
 import pikitupLogo from "@/assets/clients/pikitup.jpeg";
-import moreteleLogo from "@/assets/clients/moretele.jpg";
 import royalBafokengLogo from "@/assets/clients/royal-bafokeng.jpg";
 import impalaPlatinumLogo from "@/assets/clients/impala-platinum.jpg";
-import angloPlatinumLogo from "@/assets/clients/anglo-platinum.jpeg";
+import groupFiveLogo from "@/assets/clients/group-five.png";
 
 const clients = [
   {
@@ -21,10 +20,6 @@ const clients = [
     logo: pikitupLogo,
   },
   {
-    name: "Moretele Local Municipality",
-    logo: moreteleLogo,
-  },
-  {
     name: "Royal Bafokeng Holdings",
     logo: royalBafokengLogo,
   },
@@ -33,8 +28,8 @@ const clients = [
     logo: impalaPlatinumLogo,
   },
   {
-    name: "Anglo American Platinum",
-    logo: angloPlatinumLogo,
+    name: "Group Five",
+    logo: groupFiveLogo,
   },
 ];
 
