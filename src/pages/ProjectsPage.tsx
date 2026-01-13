@@ -37,75 +37,16 @@ const clients = [
   { name: "Anglo American Platinum", sector: "Mining", logo: angloPlatinum },
 ];
 
-const projects = [
-  {
-    title: "Mining Site Infrastructure Development",
-    client: "Glencore",
-    location: "North West Province",
-    duration: "18 months",
-    description: "Bulk earthworks and road construction for mining operations, including site preparation, haul road construction, and heavy materials transport. Delivered on schedule with zero safety incidents.",
-    services: ["Civil Engineering", "Plant Hire", "Logistics"],
-    highlights: ["500,000m³ earthworks", "15km haul roads", "Zero LTIs"],
-  },
-  {
-    title: "Municipal Waste Management Logistics",
-    client: "Pikitup",
-    location: "Johannesburg, Gauteng",
-    duration: "Ongoing",
-    description: "Comprehensive waste transportation and logistics support for municipal waste management operations across Johannesburg metropolitan area.",
-    services: ["Road Freight", "Logistics"],
-    highlights: ["Daily operations", "Fleet of 20+ vehicles", "99% uptime"],
-  },
-  {
-    title: "Community Infrastructure Development",
-    client: "Moretele Local Municipality",
-    location: "Moretele, North West",
-    duration: "24 months",
-    description: "Public infrastructure development including road construction, stormwater drainage, and building works for community facilities and schools.",
-    services: ["Civil Engineering", "Building Construction"],
-    highlights: ["12km roads", "3 community centers", "Local job creation"],
-  },
-  {
-    title: "Platinum Mine Staff Transport",
-    client: "Impala Platinum",
-    location: "Rustenburg, North West",
-    duration: "Ongoing contract",
-    description: "Mine-compliant staff transport services with 22-seater buses for daily crew movement across multiple mine sites.",
-    services: ["Passenger Transport"],
-    highlights: ["500+ daily passengers", "Multiple shifts", "100% compliance"],
-  },
-  {
-    title: "Tailings Dam Construction",
-    client: "Anglo American Platinum",
-    location: "Limpopo Province",
-    duration: "12 months",
-    description: "Earthworks and construction support for tailings dam expansion project, including material transport and site preparation.",
-    services: ["Civil Engineering", "Plant Hire", "Road Freight"],
-    highlights: ["Critical infrastructure", "Environmental compliance", "On-time delivery"],
-  },
-  {
-    title: "Royal Bafokeng Infrastructure",
-    client: "Royal Bafokeng Holdings",
-    location: "Phokeng, North West",
-    duration: "36 months",
-    description: "Long-term infrastructure development partnership supporting community development projects and mining operations support.",
-    services: ["Civil Engineering", "Plant Hire", "Logistics"],
-    highlights: ["Community impact", "Skills transfer", "Long-term partnership"],
-  },
-];
-
 const sectors = [
-  { icon: Pickaxe, name: "Mining", count: "4+ Partners", description: "Earthworks, transport, and plant hire for mining operations" },
-  { icon: Building, name: "Municipal", count: "3+ Projects", description: "Waste management and infrastructure development" },
-  { icon: Building2, name: "Government", count: "2+ Contracts", description: "Public works and community development" },
-  { icon: Factory, name: "Industrial", count: "5+ Clients", description: "Construction and logistics support" },
+  { icon: Pickaxe, name: "Mining", description: "Earthworks, transport, and plant hire for mining operations" },
+  { icon: Building, name: "Municipal", description: "Waste management and infrastructure development" },
+  { icon: Building2, name: "Government", description: "Public works and community development" },
+  { icon: Factory, name: "Private Sector", description: "Construction and logistics support" },
 ];
 
 const stats = [
   { value: "200+", label: "Projects Completed" },
   { value: "15+", label: "Years Experience" },
-  { value: "6+", label: "Major Partners" },
-  { value: "100%", label: "Client Retention" },
 ];
 
 const ProjectsPage = () => {
@@ -122,7 +63,7 @@ const ProjectsPage = () => {
         {/* Stats */}
         <section className="py-12 bg-primary">
           <div className="container-custom">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 gap-8">
               {stats.map((stat) => (
                 <div key={stat.label} className="text-center">
                   <div className="text-4xl md:text-5xl font-bold text-primary-foreground mb-1">
@@ -158,7 +99,6 @@ const ProjectsPage = () => {
                     <sector.icon className="h-7 w-7 text-accent" />
                   </div>
                   <h3 className="font-bold text-foreground">{sector.name}</h3>
-                  <p className="text-accent font-semibold text-sm mb-2">{sector.count}</p>
                   <p className="text-muted-foreground text-sm">{sector.description}</p>
                 </div>
               ))}

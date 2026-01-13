@@ -4,10 +4,10 @@ import logo from "@/assets/logo.jpg";
 
 const footerLinks = {
   services: [
-    { name: "Civil Engineering", href: "/services" },
-    { name: "Plant Hire", href: "/services" },
-    { name: "Road Freight", href: "/services" },
-    { name: "Passenger Transport", href: "/services" },
+    { name: "Bulk Transport Logistics", href: "/services" },
+    { name: "Construction Services", href: "/services" },
+    { name: "Plant & Equipment Hire", href: "/services" },
+    { name: "Executive Shuttles", href: "/services" },
     { name: "Technical Consulting", href: "/services" },
   ],
   company: [
@@ -99,14 +99,14 @@ export const Footer = () => {
                 className="flex items-center gap-3 text-primary-foreground/70 hover:text-accent transition-colors"
               >
                 <Phone className="h-5 w-5 text-accent" />
-                0861 555 058
+                0861-555-058
               </a>
               <a
-                href="mailto:bsilabele@silabele.com"
+                href="mailto:info@silabele.com"
                 className="flex items-center gap-3 text-primary-foreground/70 hover:text-accent transition-colors"
               >
                 <Mail className="h-5 w-5 text-accent" />
-                bsilabele@silabele.com
+                info@silabele.com
               </a>
               <div className="flex items-start gap-3 text-primary-foreground/70">
                 <MapPin className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
@@ -130,7 +130,7 @@ export const Footer = () => {
               reserved.
             </p>
             <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
-              <p>CIDB 7CE PE | 5GB PE Graded | NHBRC Registered</p>
+              <p>100% Black-Owned | CIDB 7CE | 5GB</p>
               <span className="hidden md:inline">|</span>
               <p>
                 Designed by{" "}

@@ -43,47 +43,56 @@ const processSteps = [
 
 const serviceDetails = [
   {
-    title: "Civil Engineering",
+    title: "Bulk Transport Logistics",
     features: [
-      "Bulk earthworks and site preparation",
-      "Road construction and rehabilitation",
+      "Mining-focused bulk transportation",
+      "Side tippers (10m³, 34-ton)",
+      "Reliable scheduled haulage",
+      "Compliant operations",
+      "Materials transport",
+      "Mine-to-plant logistics",
+    ],
+  },
+  {
+    title: "Construction Services",
+    features: [
+      "Civil Engineering",
+      "General Building",
+      "Roadworks (asphalt-focused)",
+      "Site preparation",
       "Stormwater drainage systems",
-      "Dam construction and maintenance",
-      "General building construction",
       "Infrastructure development",
     ],
   },
   {
-    title: "Plant Hire",
+    title: "Plant & Equipment Hire",
     features: [
-      "Excavators (various sizes)",
-      "Front-end loaders",
-      "TLBs and backhoes",
-      "Graders and compactors",
+      "TLBs",
+      "Excavators",
+      "Rollers",
+      "Compactors",
       "Water bowsers",
-      "Operators available on request",
+      "Graders",
     ],
   },
   {
-    title: "Road Freight",
-    features: [
-      "Side tipper trucks (34-ton)",
-      "Flatbed transportation",
-      "Abnormal load handling",
-      "Construction material delivery",
-      "Mining ore transport",
-      "Long-distance hauling",
-    ],
-  },
-  {
-    title: "Passenger Transport",
+    title: "Executive Shuttles",
     features: [
       "22-seater mine-compliant buses",
+      "Executive transport",
       "Crew transportation",
-      "Airport transfers",
       "Corporate shuttles",
-      "Event transportation",
+      "Staff transportation",
       "Daily shift transport",
+    ],
+  },
+  {
+    title: "Technical Support Consulting",
+    features: [
+      "Project advisory",
+      "Infrastructure support",
+      "Logistics support",
+      "On-site planning",
     ],
   },
 ];
@@ -309,9 +318,9 @@ const ServicesPage = () => {
                     </Link>
                   </Button>
                   <Button variant="outline" size="xl" className="w-full" asChild>
-                    <a href="tel:+27123456789">
+                    <a href="tel:0861555058">
                       <Phone className="mr-2 h-5 w-5" />
-                      Call Us Now
+                      0861-555-058
                     </a>
                   </Button>
                 </div>
