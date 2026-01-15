@@ -13,7 +13,7 @@ const values = [
 const stats = [
   { number: "15+", label: "Years Experience" },
   { number: "100%", label: "Black-Owned" },
-  { number: "CIDB", label: "5GB Graded" },
+  { number: "CIDB", label: "7CE, 5GB Graded" },
   { number: "24/7", label: "Support Available" },
 ];
 
