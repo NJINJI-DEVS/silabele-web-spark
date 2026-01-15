@@ -9,6 +9,9 @@ import pikitupLogo from "@/assets/clients/pikitup.jpeg";
 import royalBafokengLogo from "@/assets/clients/royal-bafokeng.jpg";
 import impalaPlatinumLogo from "@/assets/clients/impala-platinum.jpg";
 import groupFiveLogo from "@/assets/clients/group-five.png";
+import wbhoLogo from "@/assets/clients/wbho.png";
+import gepLogo from "@/assets/clients/gep.png";
+import socialDevLogo from "@/assets/clients/social-development.jpg";
 
 const clients = [
   {
@@ -33,15 +36,15 @@ const clients = [
   },
   {
     name: "WBHO",
-    logo: null,
+    logo: wbhoLogo,
   },
   {
     name: "GEP",
-    logo: null,
+    logo: gepLogo,
   },
   {
     name: "Dept. of Health & Social Development",
-    logo: null,
+    logo: socialDevLogo,
   },
 ];
 
