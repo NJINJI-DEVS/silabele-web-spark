@@ -19,26 +19,26 @@ const Index = () => {
         <Hero />
         <Clients />
         <Stats />
-        
+
         {/* About Preview */}
         <About showFull={false} />
-        
+
         {/* Services Preview */}
         <Services showAll={false} />
-        
+
         {/* Why Choose Us Section */}
         <section className="section-padding bg-secondary/30">
           <div className="container-custom">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <span className="text-accent font-semibold uppercase tracking-wider text-sm">
-                  Why Choose Us
-                </span>
+                <span className="text-accent font-semibold uppercase tracking-wider text-sm">Why Choose Us</span>
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2 mb-6">
-                  Your Trusted Partner in Construction & Logistics
+                  Your Trusted Partner in Construction & Transport Logistics
                 </h2>
                 <p className="text-muted-foreground mb-8">
-                  With over 15 years of experience, SILABELE TRADING ENTERPRISE has established itself as a leader in civil engineering, plant hire, and logistics services across South Africa.
+                  With over 15 years of experience, SILABELE TRADING ENTERPRISE has established itself as a leader in
+                  Transport Logistics, Construction, Plant Hire, and Technical Support Consulting services across South
+                  Africa.
                 </p>
                 <ul className="space-y-4">
                   {[
@@ -57,9 +57,7 @@ const Index = () => {
                 </ul>
               </div>
               <div className="bg-card rounded-2xl p-8 border border-border shadow-lg">
-                <h3 className="text-2xl font-bold text-foreground mb-4">
-                  Get a Free Quote
-                </h3>
+                <h3 className="text-2xl font-bold text-foreground mb-4">Get a Free Quote</h3>
                 <p className="text-muted-foreground mb-6">
                   Contact us today for a no-obligation quote tailored to your project requirements.
                 </p>
@@ -81,19 +79,17 @@ const Index = () => {
             </div>
           </div>
         </section>
-        
+
         {/* Fleet Preview */}
         <Fleet showCTA={false} />
-        
+
         {/* Testimonials */}
         <Testimonials />
-        
+
         {/* CTA Section */}
         <section className="section-padding bg-accent">
           <div className="container-custom text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-accent-foreground mb-4">
-              Ready to Start Your Project?
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-accent-foreground mb-4">Ready to Start Your Project?</h2>
             <p className="text-accent-foreground/90 text-lg max-w-2xl mx-auto mb-8">
               Get in touch with our team to discuss your requirements and receive a tailored quote.
             </p>
