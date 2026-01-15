@@ -8,7 +8,7 @@ const footerLinks = {
     { name: "Construction Services", href: "/services" },
     { name: "Plant & Equipment Hire", href: "/services" },
     { name: "Executive Shuttles", href: "/services" },
-    { name: "Technical Consulting", href: "/services" },
+    { name: "Technical Support Consulting", href: "/services" },
   ],
   company: [
     { name: "About Us", href: "/about" },
@@ -32,14 +32,10 @@ export const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <img
-              src={logo}
-              alt="SILABELE Trading Enterprise"
-              className="h-16 w-auto mb-6 brightness-0 invert"
-            />
+            <img src={logo} alt="SILABELE Trading Enterprise" className="h-16 w-auto mb-6 brightness-0 invert" />
             <p className="text-primary-foreground/80 mb-6 leading-relaxed">
-              100% Black-owned, family-led infrastructure and logistics company
-              delivering reliable solutions across South Africa since 2009.
+              100% Black-owned, family-led infrastructure and logistics company delivering reliable solutions across
+              South Africa since 2009.
             </p>
             {/* Social Links */}
             <div className="flex gap-4">
@@ -62,10 +58,7 @@ export const Footer = () => {
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-primary-foreground/70 hover:text-accent transition-colors"
-                  >
+                  <Link to={link.href} className="text-primary-foreground/70 hover:text-accent transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -79,10 +72,7 @@ export const Footer = () => {
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-primary-foreground/70 hover:text-accent transition-colors"
-                  >
+                  <Link to={link.href} className="text-primary-foreground/70 hover:text-accent transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -125,10 +115,7 @@ export const Footer = () => {
       <div className="border-t border-primary-foreground/10">
         <div className="container-custom py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/60">
-            <p>
-              © {new Date().getFullYear()} SILABELE Trading Enterprise. All rights
-              reserved.
-            </p>
+            <p>© {new Date().getFullYear()} SILABELE Trading Enterprise. All rights reserved.</p>
             <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
               <p>100% Black-Owned | CIDB 7CE | 5GB</p>
               <span className="hidden md:inline">|</span>
