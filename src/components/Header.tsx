@@ -32,9 +32,7 @@ export const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        showTransparent
-          ? "bg-transparent"
-          : "bg-background/95 backdrop-blur-md shadow-md"
+        showTransparent ? "bg-transparent" : "bg-background/95 backdrop-blur-md shadow-md"
       }`}
     >
       {/* Top Bar */}
@@ -50,9 +48,7 @@ export const Header = () => {
               <span>info@silabele.com</span>
             </a>
           </div>
-          <div className="text-sm opacity-90">
-            100% Black-Owned | CIDB 7CE PE Graded
-          </div>
+          <div className="text-sm opacity-90">100% Black-Owned | CIDB 7CE, 5GB Graded</div>
         </div>
       </div>
 
@@ -89,11 +85,7 @@ export const Header = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden p-2"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
-          >
+          <button className="lg:hidden p-2" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
             {isOpen ? (
               <X className={`h-6 w-6 ${showTransparent ? "text-primary-foreground" : "text-foreground"}`} />
             ) : (
