@@ -13,7 +13,7 @@ import concreteWork from "@/assets/concrete-work.jpg";
 import roadConstruction from "@/assets/road-construction.jpg";
 import roadPaving from "@/assets/road-paving.jpg";
 import roadEquipment from "@/assets/road-equipment.jpg";
-import roadProgress from "@/assets/road-progress.jpg";
+import roadProgress from "@/assets/road-development.jpg";
 import foundationWork from "@/assets/foundation-work.jpg";
 import aerialConstruction from "@/assets/aerial-construction.jpg";
 import completedBuilding from "@/assets/completed-building.jpg";
