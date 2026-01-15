@@ -31,6 +31,18 @@ const clients = [
     name: "Group Five",
     logo: groupFiveLogo,
   },
+  {
+    name: "WBHO",
+    logo: null,
+  },
+  {
+    name: "GEP",
+    logo: null,
+  },
+  {
+    name: "Dept. of Health & Social Development",
+    logo: null,
+  },
 ];
 
 export const Clients = () => {
@@ -53,11 +65,17 @@ export const Clients = () => {
               key={client.name}
               className="group flex items-center justify-center p-6 bg-card rounded-xl border border-border hover:border-accent/50 hover:shadow-lg transition-all duration-300 h-24 w-48"
             >
-              <img
-                src={client.logo}
-                alt={`${client.name} logo`}
-                className="max-h-16 max-w-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
-              />
+              {client.logo ? (
+                <img
+                  src={client.logo}
+                  alt={`${client.name} logo`}
+                  className="max-h-16 max-w-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                />
+              ) : (
+                <span className="text-sm font-semibold text-muted-foreground group-hover:text-foreground transition-colors text-center leading-tight">
+                  {client.name}
+                </span>
+              )}
             </div>
           ))}
         </div>
@@ -75,11 +93,17 @@ export const Clients = () => {
               {clients.map((client) => (
                 <CarouselItem key={client.name} className="pl-2 basis-1/2">
                   <div className="flex items-center justify-center p-4 bg-card rounded-xl border border-border h-20">
-                    <img
-                      src={client.logo}
-                      alt={`${client.name} logo`}
-                      className="max-h-12 max-w-full object-contain"
-                    />
+                    {client.logo ? (
+                      <img
+                        src={client.logo}
+                        alt={`${client.name} logo`}
+                        className="max-h-12 max-w-full object-contain"
+                      />
+                    ) : (
+                      <span className="text-xs font-semibold text-muted-foreground text-center leading-tight">
+                        {client.name}
+                      </span>
+                    )}
                   </div>
                 </CarouselItem>
               ))}
