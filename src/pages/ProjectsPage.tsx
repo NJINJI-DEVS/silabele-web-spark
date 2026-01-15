@@ -26,6 +26,9 @@ import impalaPlatinum from "@/assets/clients/impala-platinum.jpg";
 import pikitup from "@/assets/clients/pikitup.jpeg";
 import royalBafokeng from "@/assets/clients/royal-bafokeng.jpg";
 import groupFive from "@/assets/clients/group-five.png";
+import wbho from "@/assets/clients/wbho.png";
+import gep from "@/assets/clients/gep.png";
+import socialDevelopment from "@/assets/clients/social-development.jpg";
 
 const clients = [
   { name: "Glencore", sector: "Mining", logo: glencore },
@@ -33,6 +36,9 @@ const clients = [
   { name: "Royal Bafokeng Holdings", sector: "Mining", logo: royalBafokeng },
   { name: "Impala Platinum", sector: "Mining", logo: impalaPlatinum },
   { name: "Group Five", sector: "Construction", logo: groupFive },
+  { name: "WBHO", sector: "Construction", logo: wbho },
+  { name: "GEP", sector: "Government", logo: gep },
+  { name: "Dept. of Health & Social Development", sector: "Government", logo: socialDevelopment },
 ];
 
 const sectors = [
