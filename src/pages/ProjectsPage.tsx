@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 import { PageHeader } from "@/components/PageHeader";
 import { Testimonials } from "@/components/Testimonials";
 import { Button } from "@/components/ui/button";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, CarouselDots } from "@/components/ui/carousel";
 import { ArrowRight, Building, Pickaxe, Building2, Factory, Users } from "lucide-react";
 import Autoplay from "embla-carousel-autoplay";
 
@@ -158,6 +158,7 @@ const ProjectsPage = () => {
               </CarouselContent>
               <CarouselPrevious className="hidden md:flex -left-4" />
               <CarouselNext className="hidden md:flex -right-4" />
+              <CarouselDots />
             </Carousel>
           </div>
         </section>
