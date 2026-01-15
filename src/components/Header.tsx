@@ -64,7 +64,9 @@ export const Header = () => {
             <img
               src={logo}
               alt="SILABELE Trading Enterprise"
-              className="h-12 md:h-16 w-auto"
+              className={`h-12 md:h-16 w-auto transition-all duration-300 ${
+                showTransparent ? "brightness-0 invert" : ""
+              }`}
             />
           </Link>
 
