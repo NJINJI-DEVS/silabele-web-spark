@@ -46,7 +46,7 @@ const serviceDetails = [
     title: "Bulk Transport Logistics",
     features: [
       "Mining-focused bulk transportation",
-      "Side tippers (10m³, 34-ton)",
+      "Side tippers (34-ton, 40-ton)",
       "Reliable scheduled haulage",
       "Compliant operations",
       "Materials transport",
