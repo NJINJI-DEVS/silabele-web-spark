@@ -66,14 +66,7 @@ const serviceDetails = [
   },
   {
     title: "Plant & Equipment Hire",
-    features: [
-      "TLBs",
-      "Excavators",
-      "Rollers",
-      "Compactors",
-      "Water bowsers",
-      "Graders",
-    ],
+    features: ["TLBs", "Excavators", "Rollers", "Compactors", "Water bowsers", "Graders"],
   },
   {
     title: "Executive Shuttles",
@@ -88,12 +81,7 @@ const serviceDetails = [
   },
   {
     title: "Technical Support Consulting",
-    features: [
-      "Project advisory",
-      "Infrastructure support",
-      "Logistics support",
-      "On-site planning",
-    ],
+    features: ["Project advisory", "Infrastructure support", "Logistics support", "On-site planning"],
   },
 ];
 
@@ -110,7 +98,7 @@ const ServicesPage = () => {
       <main>
         <PageHeader
           badge="Our Services"
-          title="Comprehensive Infrastructure Solutions"
+          title="Comprehensive Construction Solutions"
           subtitle="We serve public and private sector clients with a full suite of services that meet technical, regulatory, and logistical demands."
         />
         <Services showAll={true} showHeader={false} />
@@ -119,18 +107,14 @@ const ServicesPage = () => {
         <section className="section-padding bg-secondary">
           <div className="container-custom">
             <div className="text-center mb-12">
-              <span className="text-accent font-semibold uppercase tracking-wider text-sm">
-                Our Work in Action
-              </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2">
-                Service Gallery
-              </h2>
+              <span className="text-accent font-semibold uppercase tracking-wider text-sm">Our Work in Action</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2">Service Gallery</h2>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img 
-                  src={asphaltPaving} 
-                  alt="Asphalt paving works" 
+                <img
+                  src={asphaltPaving}
+                  alt="Asphalt paving works"
                   className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
@@ -141,9 +125,9 @@ const ServicesPage = () => {
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img 
-                  src={stormwaterDrainage} 
-                  alt="Stormwater drainage construction" 
+                <img
+                  src={stormwaterDrainage}
+                  alt="Stormwater drainage construction"
                   className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
@@ -154,9 +138,9 @@ const ServicesPage = () => {
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img 
-                  src={concretePouring} 
-                  alt="Concrete pouring operations" 
+                <img
+                  src={concretePouring}
+                  alt="Concrete pouring operations"
                   className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
@@ -167,9 +151,9 @@ const ServicesPage = () => {
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img 
-                  src={industrialFoundation} 
-                  alt="Industrial foundation construction" 
+                <img
+                  src={industrialFoundation}
+                  alt="Industrial foundation construction"
                   className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
@@ -180,9 +164,9 @@ const ServicesPage = () => {
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img 
-                  src={concreteFinishing} 
-                  alt="Concrete finishing work" 
+                <img
+                  src={concreteFinishing}
+                  alt="Concrete finishing work"
                   className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
@@ -193,9 +177,9 @@ const ServicesPage = () => {
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img 
-                  src={completedRoad} 
-                  alt="Completed road project" 
+                <img
+                  src={completedRoad}
+                  alt="Completed road project"
                   className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
@@ -213,12 +197,8 @@ const ServicesPage = () => {
         <section className="section-padding bg-background">
           <div className="container-custom">
             <div className="text-center mb-12">
-              <span className="text-accent font-semibold uppercase tracking-wider text-sm">
-                What We Offer
-              </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2">
-                Detailed Service Breakdown
-              </h2>
+              <span className="text-accent font-semibold uppercase tracking-wider text-sm">What We Offer</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2">Detailed Service Breakdown</h2>
             </div>
             <div className="grid md:grid-cols-2 gap-8">
               {serviceDetails.map((service) => (
@@ -245,12 +225,8 @@ const ServicesPage = () => {
         <section className="section-padding bg-secondary">
           <div className="container-custom">
             <div className="text-center mb-12">
-              <span className="text-accent font-semibold uppercase tracking-wider text-sm">
-                How We Work
-              </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2">
-                Our Project Process
-              </h2>
+              <span className="text-accent font-semibold uppercase tracking-wider text-sm">How We Work</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2">Our Project Process</h2>
               <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
                 From initial consultation to project completion, we follow a structured approach to ensure success.
               </p>
@@ -280,14 +256,11 @@ const ServicesPage = () => {
           <div className="container-custom">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <span className="text-accent font-semibold uppercase tracking-wider text-sm">
-                  Industries
-                </span>
-                <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2 mb-6">
-                  Sectors We Serve
-                </h2>
+                <span className="text-accent font-semibold uppercase tracking-wider text-sm">Industries</span>
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2 mb-6">Sectors We Serve</h2>
                 <p className="text-muted-foreground mb-8">
-                  Our expertise spans multiple industries, delivering specialized solutions tailored to each sector's unique requirements.
+                  Our expertise spans multiple industries, delivering specialized solutions tailored to each sector's
+                  unique requirements.
                 </p>
                 <div className="space-y-6">
                   {industries.map((industry) => (
@@ -304,11 +277,10 @@ const ServicesPage = () => {
                 </div>
               </div>
               <div className="bg-card p-8 rounded-2xl border border-border shadow-lg">
-                <h3 className="text-2xl font-bold text-foreground mb-4">
-                  Need a Custom Solution?
-                </h3>
+                <h3 className="text-2xl font-bold text-foreground mb-4">Need a Custom Solution?</h3>
                 <p className="text-muted-foreground mb-6">
-                  We understand that every project is unique. Contact us to discuss your specific requirements and receive a tailored proposal.
+                  We understand that every project is unique. Contact us to discuss your specific requirements and
+                  receive a tailored proposal.
                 </p>
                 <div className="space-y-4">
                   <Button variant="default" size="xl" className="w-full" asChild>
@@ -332,9 +304,7 @@ const ServicesPage = () => {
         {/* CTA Section */}
         <section className="section-padding bg-accent">
           <div className="container-custom text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-accent-foreground mb-4">
-              Ready to Get Started?
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-accent-foreground mb-4">Ready to Get Started?</h2>
             <p className="text-accent-foreground/90 text-lg max-w-2xl mx-auto mb-8">
               Let's discuss how our services can support your next project.
             </p>
