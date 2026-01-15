@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 const fleetItems = [
   {
     category: "Bulk Transport Vehicles",
-    items: ["10m³ Tipper Trucks", "34-Ton Side Tippers", "Superlinks"],
+    items: ["10m³ Tipper Trucks", "34-Ton Side Tippers", "40-Ton Side Tippers"],
     color: "bg-accent",
   },
   {
@@ -44,16 +44,13 @@ export const Fleet = ({ showCTA = true }: FleetProps) => {
       <div className="container-custom">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="text-accent font-semibold uppercase tracking-wider text-sm">
-            Our Fleet
-          </span>
+          <span className="text-accent font-semibold uppercase tracking-wider text-sm">Our Fleet</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground mt-2 mb-4">
             Fleet Strength You Can Rely On
           </h2>
           <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto">
-            STE owns and operates a diverse range of equipment tailored to the
-            construction, mining, and municipal sectors. All assets are rigorously
-            maintained, mine-compliant, and operator-supported.
+            STE owns and operates a diverse range of equipment tailored to the construction, mining, and municipal
+            sectors. All assets are rigorously maintained, mine-compliant, and operator-supported.
           </p>
         </div>
 
@@ -85,15 +82,10 @@ export const Fleet = ({ showCTA = true }: FleetProps) => {
 
           {/* Features & CTA */}
           <div className="flex flex-col justify-center">
-            <h3 className="text-2xl font-bold text-primary-foreground mb-6">
-              Why Choose Our Fleet?
-            </h3>
+            <h3 className="text-2xl font-bold text-primary-foreground mb-6">Why Choose Our Fleet?</h3>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
               {features.map((feature) => (
-                <li
-                  key={feature}
-                  className="flex items-center text-primary-foreground"
-                >
+                <li key={feature} className="flex items-center text-primary-foreground">
                   <span className="w-2 h-2 bg-accent rounded-full mr-3" />
                   {feature}
                 </li>
