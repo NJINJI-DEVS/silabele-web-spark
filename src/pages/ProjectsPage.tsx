@@ -4,7 +4,9 @@ import { Footer } from "@/components/Footer";
 import { PageHeader } from "@/components/PageHeader";
 import { Testimonials } from "@/components/Testimonials";
 import { Button } from "@/components/ui/button";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { ArrowRight, Building, Pickaxe, Building2, Factory, Users } from "lucide-react";
+import Autoplay from "embla-carousel-autoplay";
 
 // Project images
 import concreteWork from "@/assets/concrete-work.jpg";
@@ -122,26 +124,41 @@ const ProjectsPage = () => {
                 Companies that trust us to deliver excellence on every project.
               </p>
             </div>
-            <div className="flex flex-wrap justify-center gap-6">
-              {clients.map((client) => (
-                <div
-                  key={client.name}
-                  className="group flex flex-col items-center gap-3 p-6 bg-card rounded-xl border border-border hover:border-accent/50 hover:shadow-lg transition-all duration-300"
-                >
-                  <div className="w-20 h-20 flex items-center justify-center group-hover:scale-110 transition-transform overflow-hidden">
-                    <img 
-                      src={client.logo} 
-                      alt={`${client.name} logo`}
-                      className="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
-                    />
-                  </div>
-                  <span className="text-foreground font-heading font-semibold text-sm text-center">
-                    {client.name}
-                  </span>
-                  <span className="text-muted-foreground text-xs">{client.sector}</span>
-                </div>
-              ))}
-            </div>
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              plugins={[
+                Autoplay({
+                  delay: 2500,
+                  stopOnInteraction: false,
+                }),
+              ]}
+              className="w-full"
+            >
+              <CarouselContent className="-ml-4">
+                {clients.map((client) => (
+                  <CarouselItem key={client.name} className="pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                    <div className="group flex flex-col items-center gap-3 p-6 bg-card rounded-xl border border-border hover:border-accent/50 hover:shadow-lg transition-all duration-300 h-full">
+                      <div className="w-20 h-20 flex items-center justify-center group-hover:scale-110 transition-transform overflow-hidden">
+                        <img 
+                          src={client.logo} 
+                          alt={`${client.name} logo`}
+                          className="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                        />
+                      </div>
+                      <span className="text-foreground font-heading font-semibold text-sm text-center">
+                        {client.name}
+                      </span>
+                      <span className="text-muted-foreground text-xs">{client.sector}</span>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="hidden md:flex -left-4" />
+              <CarouselNext className="hidden md:flex -right-4" />
+            </Carousel>
           </div>
         </section>
 
