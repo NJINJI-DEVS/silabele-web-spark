@@ -1,17 +1,11 @@
 import { useState } from "react";
-import { MapPin, Phone, Mail, Send, Clock } from "lucide-react";
+import { Phone, Mail, Send, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 
 const contactInfo = [
-  {
-    icon: MapPin,
-    label: "Address",
-    value: "155 Ramogotsi Section, Chaneng Village, Rustenburg, North West, 0310",
-    note: "By appointment only",
-  },
   {
     icon: Phone,
     label: "Phone",

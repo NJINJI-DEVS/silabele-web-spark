@@ -2,7 +2,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHeader } from "@/components/PageHeader";
 import { Contact } from "@/components/Contact";
-import { Clock, Phone, Mail, MapPin, CheckCircle } from "lucide-react";
+import { Clock, Phone, Mail, CheckCircle } from "lucide-react";
 
 const contactMethods = [
   {
@@ -18,13 +18,6 @@ const contactMethods = [
     description: "Send us a detailed inquiry",
     value: "info@silabele.com",
     action: "mailto:info@silabele.com",
-  },
-  {
-    icon: MapPin,
-    title: "Make an Appointment",
-    description: "Office visits by appointment only",
-    value: "Chaneng Village, North West",
-    action: "/contact#contact",
   },
 ];
 
@@ -84,7 +77,7 @@ const ContactPage = () => {
         {/* Quick Contact Methods */}
         <section className="py-12 bg-secondary">
           <div className="container-custom">
-            <div className="grid sm:grid-cols-3 gap-6">
+            <div className="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
               {contactMethods.map((method) => (
                 <a
                   key={method.title}
