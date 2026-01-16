@@ -36,7 +36,7 @@ const fleetFeatures = [
 ];
 
 const fleetStats = [
-  { value: "100+", label: "Total Vehicles" },
+  { value: "50+", label: "Total Vehicles" },
   { value: "24/7", label: "Availability" },
   { value: "15+", label: "Equipment Types" },
   { value: "4", label: "Service Categories" },

@@ -56,7 +56,7 @@ const sectors = [
 ];
 
 const stats = [
-  { value: "200+", label: "Projects Completed" },
+  { value: "100+", label: "Projects Completed" },
   { value: "15+", label: "Years Experience" },
 ];
 
