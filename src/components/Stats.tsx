@@ -15,13 +15,13 @@ const stats = [
   },
   {
     icon: Truck,
-    value: "100+",
+    value: "50+",
     label: "Fleet Vehicles",
     description: "Modern equipment",
   },
   {
     icon: Award,
-    value: "200+",
+    value: "100+",
     label: "Projects Completed",
     description: "Successful deliveries",
   },

@@ -43,7 +43,7 @@ const Index = () => {
                 <ul className="space-y-4">
                   {[
                     "15+ years of industry experience",
-                    "200+ completed projects",
+                    "100+ completed projects",
                     "Multi-sector delivery: Mining, Government, Private",
                     "100% Black-Owned, family-led enterprise",
                     "CIDB 7CE and 5GB graded",
