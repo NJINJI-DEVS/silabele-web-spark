@@ -2,22 +2,16 @@ import { Star, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    name: "John Mokoena",
-    role: "Project Manager",
     company: "Glencore",
     content: "SILABELE TRADING ENTERPRISE delivered exceptional earthmoving services for our mining operations. Their fleet is well-maintained and their team is highly professional. They completed the project ahead of schedule.",
     rating: 5,
   },
   {
-    name: "Sarah Ndlovu",
-    role: "Operations Director",
     company: "Pikitup",
     content: "We've been working with SILABELE for our waste management logistics needs. Their tipper trucks and drivers are reliable, and their commitment to safety standards is commendable.",
     rating: 5,
   },
   {
-    name: "David van der Merwe",
-    role: "Infrastructure Lead",
     company: "Royal Bafokeng Holdings",
     content: "The civil engineering expertise and plant hire services provided by SILABELE have been instrumental in our infrastructure development projects. Highly recommended for large-scale operations.",
     rating: 5,
@@ -60,10 +54,7 @@ export const Testimonials = () => {
               
               <div className="border-t border-border pt-4">
                 <p className="font-heading font-semibold text-foreground">
-                  {testimonial.name}
-                </p>
-                <p className="text-sm text-muted-foreground">
-                  {testimonial.role}, {testimonial.company}
+                  {testimonial.company}
                 </p>
               </div>
             </div>

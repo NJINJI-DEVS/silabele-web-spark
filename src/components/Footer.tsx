@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Linkedin, Facebook, Instagram } from "lucide-react";
+import { Phone, Mail } from "lucide-react";
 import logo from "@/assets/silabele-logo.png";
 
 const footerLinks = {
@@ -18,12 +18,6 @@ const footerLinks = {
   ],
 };
 
-const socialLinks = [
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Facebook, href: "#", label: "Facebook" },
-  { icon: Instagram, href: "#", label: "Instagram" },
-];
-
 export const Footer = () => {
   return (
     <footer className="bg-navy-dark text-primary-foreground">
@@ -37,19 +31,6 @@ export const Footer = () => {
               100% Black-owned, family-led infrastructure and logistics company delivering reliable solutions across
               South Africa since 2009.
             </p>
-            {/* Social Links */}
-            <div className="flex gap-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  className="w-10 h-10 bg-primary-foreground/10 rounded-full flex items-center justify-center hover:bg-accent transition-colors"
-                  aria-label={social.label}
-                >
-                  <social.icon className="h-5 w-5" />
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* Services Links */}
@@ -98,14 +79,6 @@ export const Footer = () => {
                 <Mail className="h-5 w-5 text-accent" />
                 info@silabele.com
               </a>
-              <div className="flex items-start gap-3 text-primary-foreground/70">
-                <MapPin className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
-                <span>
-                  155 Ramogotsi Section, Chaneng Village,
-                  <br />
-                  Rustenburg, North West, 0310
-                </span>
-              </div>
             </div>
           </div>
         </div>
