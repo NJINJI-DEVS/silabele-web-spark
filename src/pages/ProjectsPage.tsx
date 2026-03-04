@@ -48,27 +48,27 @@ import gep from "@/assets/clients/gep.png";
 import socialDevelopment from "@/assets/clients/social-development.jpg";
 
 const clients = [
-  { name: "Glencore", sector: "Mining", logo: glencore },
-  { name: "Pikitup", sector: "Municipal", logo: pikitup },
-  { name: "Royal Bafokeng Holdings", sector: "Mining", logo: royalBafokeng },
-  { name: "Impala Platinum", sector: "Mining", logo: impalaPlatinum },
-  { name: "Group Five", sector: "Construction", logo: groupFive },
-  { name: "WBHO", sector: "Construction", logo: wbho },
-  { name: "GEP", sector: "Government", logo: gep },
-  { name: "Dept. of Health & Social Development", sector: "Government", logo: socialDevelopment },
-];
+{ name: "Glencore", sector: "Mining", logo: glencore },
+{ name: "Pikitup", sector: "Municipal", logo: pikitup },
+{ name: "Royal Bafokeng Holdings", sector: "Mining", logo: royalBafokeng },
+{ name: "Impala Platinum", sector: "Mining", logo: impalaPlatinum },
+{ name: "Group Five", sector: "Construction", logo: groupFive },
+{ name: "WBHO", sector: "Construction", logo: wbho },
+{ name: "GEP", sector: "Government", logo: gep },
+{ name: "Dept. of Health & Social Development", sector: "Government", logo: socialDevelopment }];
+
 
 const sectors = [
-  { icon: Pickaxe, name: "Mining", description: "Earthworks, transport, and plant hire for mining operations" },
-  { icon: Building, name: "Municipal", description: "Waste management and infrastructure development" },
-  { icon: Building2, name: "Government", description: "Public works and community development" },
-  { icon: Factory, name: "Private Sector", description: "Construction and logistics support" },
-];
+{ icon: Pickaxe, name: "Mining", description: "Earthworks, transport, and plant hire for mining operations" },
+{ icon: Building, name: "Municipal", description: "Waste management and infrastructure development" },
+{ icon: Building2, name: "Government", description: "Public works and community development" },
+{ icon: Factory, name: "Private Sector", description: "Construction and logistics support" }];
+
 
 const stats = [
-  { value: "100+", label: "Projects Completed" },
-  { value: "15+", label: "Years Experience" },
-];
+{ value: "100+", label: "Projects Completed" },
+{ value: "15+", label: "Years Experience" }];
+
 
 const ProjectsPage = () => {
   return (
@@ -77,22 +77,22 @@ const ProjectsPage = () => {
         title="Projects & Clients | Mining, Government, Private Sector | SILABELE"
         description="View SILABELE's completed projects and trusted clients including Glencore, Impala Platinum, Royal Bafokeng, WBHO, and government departments across South Africa."
         keywords="construction projects South Africa, mining clients, Glencore contractor, Impala Platinum, road construction projects, civil engineering portfolio"
-        canonicalPath="/projects"
-      />
+        canonicalPath="/projects" />
+      
       <Header />
       <main>
         <PageHeader
           badge="Projects & Clients"
           title="Trusted by Industry Leaders"
-          subtitle="We've partnered with some of South Africa's most recognized names in mining, engineering, and local government."
-        />
+          subtitle="We've partnered with some of South Africa's most recognized names in mining, engineering, and local government." />
+        
 
         {/* Stats */}
         <section className="py-12 bg-primary">
           <div className="container-custom">
             <div className="grid grid-cols-2 gap-8">
-              {stats.map((stat) => (
-                <div key={stat.label} className="text-center">
+              {stats.map((stat) =>
+              <div key={stat.label} className="text-center">
                   <div className="text-4xl md:text-5xl font-bold text-primary-foreground mb-1">
                     {stat.value}
                   </div>
@@ -100,7 +100,7 @@ const ProjectsPage = () => {
                     {stat.label}
                   </div>
                 </div>
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -117,18 +117,18 @@ const ProjectsPage = () => {
               </h2>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {sectors.map((sector) => (
-                <div
-                  key={sector.name}
-                  className="bg-card p-6 rounded-xl shadow-md border border-border text-center card-hover"
-                >
+              {sectors.map((sector) =>
+              <div
+                key={sector.name}
+                className="bg-card p-6 rounded-xl shadow-md border border-border text-center card-hover">
+                
                   <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-accent/10 mb-4">
                     <sector.icon className="h-7 w-7 text-accent" />
                   </div>
                   <h3 className="font-bold text-foreground">{sector.name}</h3>
                   <p className="text-muted-foreground text-sm">{sector.description}</p>
                 </div>
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -148,26 +148,26 @@ const ProjectsPage = () => {
             <Carousel
               opts={{
                 align: "start",
-                loop: true,
+                loop: true
               }}
               plugins={[
-                Autoplay({
-                  delay: 2500,
-                  stopOnInteraction: false,
-                }),
-              ]}
-              className="w-full"
-            >
+              Autoplay({
+                delay: 2500,
+                stopOnInteraction: false
+              })]
+              }
+              className="w-full">
+              
               <CarouselContent className="-ml-4">
-                {clients.map((client) => (
-                  <CarouselItem key={client.name} className="pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                {clients.map((client) =>
+                <CarouselItem key={client.name} className="pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
                     <div className="group flex flex-col items-center gap-3 p-6 bg-card rounded-xl border border-border hover:border-accent/50 hover:shadow-lg transition-all duration-300 h-full">
                       <div className="w-20 h-20 flex items-center justify-center group-hover:scale-110 transition-transform overflow-hidden">
-                        <img 
-                          src={client.logo} 
-                          alt={`${client.name} logo`}
-                          className="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
-                        />
+                        <img
+                        src={client.logo}
+                        alt={`${client.name} logo`}
+                        className="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300" />
+                      
                       </div>
                       <span className="text-foreground font-heading font-semibold text-sm text-center">
                         {client.name}
@@ -175,7 +175,7 @@ const ProjectsPage = () => {
                       <span className="text-muted-foreground text-xs">{client.sector}</span>
                     </div>
                   </CarouselItem>
-                ))}
+                )}
               </CarouselContent>
               <CarouselPrevious className="hidden md:flex -left-4" />
               <CarouselNext className="hidden md:flex -right-4" />
@@ -198,11 +198,11 @@ const ProjectsPage = () => {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img 
-                  src={foundationWork} 
-                  alt="Foundation construction work" 
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                <img
+                  src={foundationWork}
+                  alt="Foundation construction work"
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+                
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
                     <h3 className="text-primary-foreground font-bold">Foundation Work</h3>
@@ -211,11 +211,11 @@ const ProjectsPage = () => {
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img 
-                  src={concreteWork} 
-                  alt="Concrete pouring on site" 
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                <img
+                  src={concreteWork}
+                  alt="Concrete pouring on site"
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+                
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
                     <h3 className="text-primary-foreground font-bold">Concrete Works</h3>
@@ -224,11 +224,11 @@ const ProjectsPage = () => {
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img 
-                  src={roadConstruction} 
-                  alt="Road construction with roller and grader" 
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                <img
+                  src={roadConstruction}
+                  alt="Road construction with roller and grader"
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+                
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
                     <h3 className="text-primary-foreground font-bold">Road Construction</h3>
@@ -237,24 +237,24 @@ const ProjectsPage = () => {
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img 
-                  src={roadPaving} 
-                  alt="Road paving equipment" 
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <div>
-                    <h3 className="text-primary-foreground font-bold">Road Surfacing</h3>
-                    <p className="text-primary-foreground/80 text-sm">Chip & spray operations</p>
-                  </div>
-                </div>
+                <img
+                  src={roadPaving}
+                  alt="Road paving equipment"
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+                
+                
+
+
+
+
+                
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img 
-                  src={roadEquipment} 
-                  alt="Road construction equipment in action" 
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                <img
+                  src={roadEquipment}
+                  alt="Road construction equipment in action"
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+                
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
                     <h3 className="text-primary-foreground font-bold">Infrastructure Projects</h3>
@@ -263,11 +263,11 @@ const ProjectsPage = () => {
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img 
-                  src={roadProgress} 
-                  alt="Road construction progress" 
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                <img
+                  src={roadProgress}
+                  alt="Road construction progress"
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+                
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
                     <h3 className="text-primary-foreground font-bold">Road Development</h3>
@@ -276,11 +276,11 @@ const ProjectsPage = () => {
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img 
-                  src={aerialConstruction} 
-                  alt="Aerial view of construction site" 
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                <img
+                  src={aerialConstruction}
+                  alt="Aerial view of construction site"
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+                
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
                     <h3 className="text-primary-foreground font-bold">Site Operations</h3>
@@ -289,11 +289,11 @@ const ProjectsPage = () => {
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img 
-                  src={completedBuilding} 
-                  alt="Completed building project" 
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                <img
+                  src={completedBuilding}
+                  alt="Completed building project"
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+                
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
                     <h3 className="text-primary-foreground font-bold">Completed Buildings</h3>
@@ -302,11 +302,11 @@ const ProjectsPage = () => {
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img 
-                  src={industrialBuilding} 
-                  alt="Industrial building construction" 
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                <img
+                  src={industrialBuilding}
+                  alt="Industrial building construction"
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+                
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
                     <h3 className="text-primary-foreground font-bold">Industrial Buildings</h3>
@@ -315,11 +315,11 @@ const ProjectsPage = () => {
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img 
-                  src={catExcavator} 
-                  alt="CAT excavator at work" 
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                <img
+                  src={catExcavator}
+                  alt="CAT excavator at work"
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+                
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
                     <h3 className="text-primary-foreground font-bold">Earthmoving</h3>
@@ -328,11 +328,11 @@ const ProjectsPage = () => {
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img 
-                  src={steBrandedTrucks} 
-                  alt="STE branded tipper trucks" 
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                <img
+                  src={steBrandedTrucks}
+                  alt="STE branded tipper trucks"
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+                
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
                     <h3 className="text-primary-foreground font-bold">Materials Transport</h3>
@@ -341,11 +341,11 @@ const ProjectsPage = () => {
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img 
-                  src={kitchenFinishes} 
-                  alt="Interior finishing work" 
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                <img
+                  src={kitchenFinishes}
+                  alt="Interior finishing work"
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+                
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
                     <h3 className="text-primary-foreground font-bold">Interior Finishes</h3>
@@ -354,11 +354,11 @@ const ProjectsPage = () => {
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img 
-                  src={concreteSlabFinishing} 
-                  alt="Workers finishing concrete slab" 
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                <img
+                  src={concreteSlabFinishing}
+                  alt="Workers finishing concrete slab"
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+                
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
                     <h3 className="text-primary-foreground font-bold">Concrete Finishing</h3>
@@ -367,11 +367,11 @@ const ProjectsPage = () => {
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img 
-                  src={brickBuilding} 
-                  alt="Completed brick building" 
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                <img
+                  src={brickBuilding}
+                  alt="Completed brick building"
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+                
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
                     <h3 className="text-primary-foreground font-bold">Building Construction</h3>
@@ -380,11 +380,11 @@ const ProjectsPage = () => {
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img 
-                  src={graderRoadworks} 
-                  alt="Grader performing roadworks" 
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                <img
+                  src={graderRoadworks}
+                  alt="Grader performing roadworks"
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+                
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
                     <h3 className="text-primary-foreground font-bold">Road Grading</h3>
@@ -393,11 +393,11 @@ const ProjectsPage = () => {
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img 
-                  src={concreteDelivery} 
-                  alt="Concrete mixer truck delivering concrete" 
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                <img
+                  src={concreteDelivery}
+                  alt="Concrete mixer truck delivering concrete"
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+                
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
                     <h3 className="text-primary-foreground font-bold">Concrete Delivery</h3>
@@ -406,11 +406,11 @@ const ProjectsPage = () => {
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img 
-                  src={rebarInstallation} 
-                  alt="Steel reinforcement installation" 
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                <img
+                  src={rebarInstallation}
+                  alt="Steel reinforcement installation"
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+                
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
                     <h3 className="text-primary-foreground font-bold">Steel Reinforcement</h3>
@@ -419,11 +419,11 @@ const ProjectsPage = () => {
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img 
-                  src={loaderMining} 
-                  alt="Front-end loader at mining site" 
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                <img
+                  src={loaderMining}
+                  alt="Front-end loader at mining site"
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+                
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
                     <h3 className="text-primary-foreground font-bold">Mining Operations</h3>
@@ -432,11 +432,11 @@ const ProjectsPage = () => {
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img 
-                  src={rollerGrader} 
-                  alt="Roller and grader on road construction" 
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                <img
+                  src={rollerGrader}
+                  alt="Roller and grader on road construction"
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+                
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
                     <h3 className="text-primary-foreground font-bold">Road Compaction</h3>
@@ -445,11 +445,11 @@ const ProjectsPage = () => {
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img 
-                  src={excavatorKerbing} 
-                  alt="Excavator and workers installing kerbing" 
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                <img
+                  src={excavatorKerbing}
+                  alt="Excavator and workers installing kerbing"
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+                
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
                     <h3 className="text-primary-foreground font-bold">Kerbing & Drainage</h3>
@@ -458,11 +458,11 @@ const ProjectsPage = () => {
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img 
-                  src={completedRoad} 
-                  alt="Completed rural road" 
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                <img
+                  src={completedRoad}
+                  alt="Completed rural road"
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+                
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
                     <h3 className="text-primary-foreground font-bold">Completed Road</h3>
@@ -471,11 +471,11 @@ const ProjectsPage = () => {
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img 
-                  src={asphaltPaver} 
-                  alt="Asphalt paving machine at work" 
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                <img
+                  src={asphaltPaver}
+                  alt="Asphalt paving machine at work"
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+                
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
                     <h3 className="text-primary-foreground font-bold">Asphalt Paving</h3>
@@ -484,11 +484,11 @@ const ProjectsPage = () => {
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img 
-                  src={concretePumpAerial} 
-                  alt="Aerial view of concrete pump on site" 
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                <img
+                  src={concretePumpAerial}
+                  alt="Aerial view of concrete pump on site"
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+                
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
                     <h3 className="text-primary-foreground font-bold">Concrete Pumping</h3>
@@ -497,11 +497,11 @@ const ProjectsPage = () => {
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img 
-                  src={industrialFoundation} 
-                  alt="Industrial foundation rebar installation" 
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                <img
+                  src={industrialFoundation}
+                  alt="Industrial foundation rebar installation"
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+                
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
                     <h3 className="text-primary-foreground font-bold">Industrial Foundations</h3>
@@ -510,11 +510,11 @@ const ProjectsPage = () => {
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img 
-                  src={concretePouring} 
-                  alt="Workers pouring concrete" 
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                <img
+                  src={concretePouring}
+                  alt="Workers pouring concrete"
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+                
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
                     <h3 className="text-primary-foreground font-bold">Concrete Pouring</h3>
@@ -523,11 +523,11 @@ const ProjectsPage = () => {
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img 
-                  src={stormwaterDrainage} 
-                  alt="Stormwater drainage channel construction" 
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                <img
+                  src={stormwaterDrainage}
+                  alt="Stormwater drainage channel construction"
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+                
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
                     <h3 className="text-primary-foreground font-bold">Stormwater Drainage</h3>
@@ -562,8 +562,8 @@ const ProjectsPage = () => {
         </section>
       </main>
       <Footer />
-    </div>
-  );
+    </div>);
+
 };
 
 export default ProjectsPage;
