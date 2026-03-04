@@ -237,10 +237,10 @@ const ProjectsPage = () => {
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img
-                  src={roadPaving}
-                  alt="Road paving equipment"
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+                
+
+
+                
                 
                 
 
