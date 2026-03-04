@@ -49,7 +49,7 @@ serve(async (req) => {
         Authorization: `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: "Silabele Website <onboarding@resend.dev>",
+        from: "Silabele Website <noreply@silabele.com>",
         to: ["info@silabele.com"],
         subject: `New Inquiry: ${service || "General"} — ${name}`,
         html: emailHtml,
