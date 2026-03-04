@@ -13,88 +13,88 @@ import miningOperations from "@/assets/mining-operations.jpg";
 import miningSite from "@/assets/mining-site.jpg";
 
 const fleetFeatures = [
-  {
-    icon: Shield,
-    title: "Mine Compliant",
-    description: "All vehicles meet strict mining industry safety and compliance standards.",
-  },
-  {
-    icon: Wrench,
-    title: "Fully Maintained",
-    description: "Regular servicing and maintenance ensures maximum uptime and reliability.",
-  },
-  {
-    icon: Clock,
-    title: "Safety Audited",
-    description: "Regular safety audits and compliance certifications across all equipment.",
-  },
-  {
-    icon: Users,
-    title: "Operator Supported",
-    description: "Experienced and certified operators available with equipment hire.",
-  },
-];
+{
+  icon: Shield,
+  title: "Mine Compliant",
+  description: "All vehicles meet strict mining industry safety and compliance standards."
+},
+{
+  icon: Wrench,
+  title: "Fully Maintained",
+  description: "Regular servicing and maintenance ensures maximum uptime and reliability."
+},
+{
+  icon: Clock,
+  title: "Safety Audited",
+  description: "Regular safety audits and compliance certifications across all equipment."
+},
+{
+  icon: Users,
+  title: "Operator Supported",
+  description: "Experienced and certified operators available with equipment hire."
+}];
+
 
 const fleetStats = [
-  { value: "50+", label: "Total Vehicles" },
-  { value: "24/7", label: "Availability" },
-  { value: "15+", label: "Equipment Types" },
-  { value: "4", label: "Service Categories" },
-];
+{ value: "50+", label: "Total Vehicles" },
+{ value: "24/7", label: "Availability" },
+{ value: "15+", label: "Equipment Types" },
+{ value: "4", label: "Service Categories" }];
+
 
 const equipmentCategories = [
-  {
-    category: "Bulk Transport Vehicles",
-    items: [
-      { name: "Side Tippers", specs: "10m³ and 34-ton capacity for bulk materials" },
-      { name: "Superlinks", specs: "For high-volume transport operations" },
-      { name: "End Tippers", specs: "For precise material placement" },
-    ],
-  },
-  {
-    category: "Construction & Earthmoving Equipment",
-    items: [
-      { name: "TLBs", specs: "Tractor-Loader-Backhoes for versatile operations" },
-      { name: "Excavators", specs: "Various sizes from 8-ton to 45-ton" },
-      { name: "Rollers", specs: "Soil and asphalt compaction" },
-      { name: "Compactors", specs: "Ground preparation and finishing" },
-      { name: "Graders", specs: "Motor graders for road construction" },
-    ],
-  },
-  {
-    category: "Passenger Transport Vehicles",
-    items: [
-      { name: "22-Seater Buses", specs: "Mine-compliant crew transport" },
-      { name: "Executive Vehicles", specs: "Corporate and VIP transportation" },
-    ],
-  },
-];
+{
+  category: "Bulk Transport Vehicles",
+  items: [
+  { name: "Side Tippers", specs: "10m³ and 34-ton capacity for bulk materials" },
+  { name: "Superlinks", specs: "For high-volume transport operations" },
+  { name: "End Tippers", specs: "For precise material placement" }]
+
+},
+{
+  category: "Construction & Earthmoving Equipment",
+  items: [
+  { name: "TLBs", specs: "Tractor-Loader-Backhoes for versatile operations" },
+  { name: "Excavators", specs: "Various sizes from 8-ton to 45-ton" },
+  { name: "Rollers", specs: "Soil and asphalt compaction" },
+  { name: "Compactors", specs: "Ground preparation and finishing" },
+  { name: "Graders", specs: "Motor graders for road construction" }]
+
+},
+{
+  category: "Passenger Transport Vehicles",
+  items: [
+  { name: "22-Seater Buses", specs: "Mine-compliant crew transport" },
+  { name: "Executive Vehicles", specs: "Corporate and VIP transportation" }]
+
+}];
+
 
 const maintenanceProcess = [
-  "Daily inspections",
-  "Weekly safety checks",
-  "Scheduled servicing",
-  "Compliance certifications",
-];
+"Daily inspections",
+"Weekly safety checks",
+"Scheduled servicing",
+"Compliance certifications"];
+
 
 const FleetPage = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      <main>
+      <main className="py-[100px]">
         <PageHeader
           badge="Our Fleet"
           title="Fleet Strength You Can Rely On"
-          subtitle="Mine-compliant, fully maintained equipment ready for your project requirements."
-        />
+          subtitle="Mine-compliant, fully maintained equipment ready for your project requirements." />
+        
         <Fleet showCTA={false} />
 
         {/* Fleet Stats */}
         <section className="py-16 bg-primary">
           <div className="container-custom">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {fleetStats.map((stat) => (
-                <div key={stat.label} className="text-center">
+              {fleetStats.map((stat) =>
+              <div key={stat.label} className="text-center">
                   <div className="text-4xl md:text-5xl font-bold text-primary-foreground mb-1">
                     {stat.value}
                   </div>
@@ -102,7 +102,7 @@ const FleetPage = () => {
                     {stat.label}
                   </div>
                 </div>
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -120,11 +120,11 @@ const FleetPage = () => {
             </div>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img 
-                  src={fleetTrucks} 
-                  alt="STE truck fleet - Daewoo and Mercedes trucks" 
-                  className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                <img
+                  src={fleetTrucks}
+                  alt="STE truck fleet - Daewoo and Mercedes trucks"
+                  className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" />
+                
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
                     <h3 className="text-primary-foreground font-bold text-lg">Truck Fleet</h3>
@@ -133,11 +133,11 @@ const FleetPage = () => {
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img 
-                  src={fleetTippers} 
-                  alt="STE side tipper trailers" 
-                  className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                <img
+                  src={fleetTippers}
+                  alt="STE side tipper trailers"
+                  className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" />
+                
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
                     <h3 className="text-primary-foreground font-bold text-lg">Side Tippers</h3>
@@ -146,11 +146,11 @@ const FleetPage = () => {
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img 
-                  src={miningOperations} 
-                  alt="STE equipment at mining operations" 
-                  className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                <img
+                  src={miningOperations}
+                  alt="STE equipment at mining operations"
+                  className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" />
+                
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
                     <h3 className="text-primary-foreground font-bold text-lg">Mining Operations</h3>
@@ -159,11 +159,11 @@ const FleetPage = () => {
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img 
-                  src={miningSite} 
-                  alt="STE fleet at mining stockpile" 
-                  className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                <img
+                  src={miningSite}
+                  alt="STE fleet at mining stockpile"
+                  className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" />
+                
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
                     <h3 className="text-primary-foreground font-bold text-lg">Site Operations</h3>
@@ -187,18 +187,18 @@ const FleetPage = () => {
               </h2>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {fleetFeatures.map((feature) => (
-                <div
-                  key={feature.title}
-                  className="bg-card p-6 rounded-xl border border-border shadow-md text-center hover:shadow-lg transition-shadow"
-                >
+              {fleetFeatures.map((feature) =>
+              <div
+                key={feature.title}
+                className="bg-card p-6 rounded-xl border border-border shadow-md text-center hover:shadow-lg transition-shadow">
+                
                   <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-accent/10 mb-4">
                     <feature.icon className="h-7 w-7 text-accent" />
                   </div>
                   <h3 className="font-bold text-foreground mb-2">{feature.title}</h3>
                   <p className="text-muted-foreground text-sm">{feature.description}</p>
                 </div>
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -215,27 +215,27 @@ const FleetPage = () => {
               </h2>
             </div>
             <div className="grid md:grid-cols-2 gap-8">
-              {equipmentCategories.map((category) => (
-                <div
-                  key={category.category}
-                  className="bg-card p-8 rounded-xl border border-border shadow-md"
-                >
+              {equipmentCategories.map((category) =>
+              <div
+                key={category.category}
+                className="bg-card p-8 rounded-xl border border-border shadow-md">
+                
                   <h3 className="text-xl font-bold text-foreground mb-6 pb-4 border-b border-border">
                     {category.category}
                   </h3>
                   <div className="space-y-4">
-                    {category.items.map((item) => (
-                      <div key={item.name} className="flex justify-between items-start">
+                    {category.items.map((item) =>
+                  <div key={item.name} className="flex justify-between items-start">
                         <div>
                           <span className="font-semibold text-foreground">{item.name}</span>
                           <p className="text-muted-foreground text-sm">{item.specs}</p>
                         </div>
                         <CheckCircle className="h-5 w-5 text-accent flex-shrink-0" />
                       </div>
-                    ))}
+                  )}
                   </div>
                 </div>
-              ))}
+              )}
             </div>
           </div>
         </section>
@@ -255,12 +255,12 @@ const FleetPage = () => {
                   Our comprehensive maintenance program ensures maximum uptime and reliability for all equipment. Every vehicle undergoes regular inspections and servicing.
                 </p>
                 <ul className="space-y-4">
-                  {maintenanceProcess.map((item, index) => (
-                    <li key={index} className="flex items-start gap-3">
+                  {maintenanceProcess.map((item, index) =>
+                  <li key={index} className="flex items-start gap-3">
                       <CheckCircle className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
                       <span className="text-foreground">{item}</span>
                     </li>
-                  ))}
+                  )}
                 </ul>
               </div>
               <div className="bg-card p-8 rounded-2xl border border-border shadow-lg">
@@ -323,8 +323,8 @@ const FleetPage = () => {
         </section>
       </main>
       <Footer />
-    </div>
-  );
+    </div>);
+
 };
 
 export default FleetPage;
