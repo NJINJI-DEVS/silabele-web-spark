@@ -10,7 +10,7 @@ import { ArrowRight, Shield, Wrench, Clock, CheckCircle, Phone, Award, Users } f
 // Fleet images
 import fleetTrucks from "@/assets/fleet-trucks.jpg";
 import fleetTippers from "@/assets/fleet-tippers.jpg";
-import miningOperations from "@/assets/mining-operations.jpg";
+import miningOperations from "@/assets/silabele-loader.jpg";
 import miningSite from "@/assets/mining-site.jpg";
 
 const fleetFeatures = [
