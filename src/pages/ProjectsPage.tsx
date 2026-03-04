@@ -236,19 +236,19 @@ const ProjectsPage = () => {
                   </div>
                 </div>
               </div>
-              <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                
-
-
-                
-                
-                
+              
 
 
 
 
-                
-              </div>
+
+
+
+
+
+
+
+              
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
                 <img
                   src={roadEquipment}
