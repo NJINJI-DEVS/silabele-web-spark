@@ -1,4 +1,5 @@
 import { Header } from "@/components/Header";
+import { SEOHead } from "@/components/SEOHead";
 import { Footer } from "@/components/Footer";
 import { PageHeader } from "@/components/PageHeader";
 import { Contact } from "@/components/Contact";
@@ -66,6 +67,12 @@ const expectations = [
 const ContactPage = () => {
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title="Contact SILABELE Trading Enterprise | Get a Free Quote"
+        description="Contact SILABELE Trading Enterprise for plant hire, civil engineering, and transport logistics quotes. Call 0861-555-058 or email info@silabele.com. Based in Rustenburg, serving all of South Africa."
+        keywords="contact Silabele, construction quote South Africa, plant hire quote, Rustenburg contractor, civil engineering contact"
+        canonicalPath="/contact"
+      />
       <Header />
       <main>
         <PageHeader
