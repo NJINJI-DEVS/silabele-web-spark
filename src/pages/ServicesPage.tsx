@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
+import { SEOHead } from "@/components/SEOHead";
 import { Footer } from "@/components/Footer";
 import { PageHeader } from "@/components/PageHeader";
 import { Services } from "@/components/Services";
@@ -94,6 +95,12 @@ const industries = [
 const ServicesPage = () => {
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title="Services | Civil Engineering, Plant Hire, Transport | SILABELE"
+        description="Comprehensive construction services including civil engineering, plant hire, bulk transport logistics, executive shuttles, and technical consulting. CIDB graded, mine-compliant."
+        keywords="civil engineering services, plant hire South Africa, bulk transport logistics, construction services Rustenburg, earthmoving equipment hire, road construction"
+        canonicalPath="/services"
+      />
       <Header />
       <main>
         <PageHeader

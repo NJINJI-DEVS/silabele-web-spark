@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
+import { SEOHead } from "@/components/SEOHead";
 import { Footer } from "@/components/Footer";
 import { PageHeader } from "@/components/PageHeader";
 import { Fleet } from "@/components/Fleet";
@@ -80,6 +81,12 @@ const maintenanceProcess = [
 const FleetPage = () => {
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title="Fleet & Equipment | Mine-Compliant Vehicles | SILABELE"
+        description="Explore SILABELE's mine-compliant fleet: side tippers, excavators, TLBs, graders, rollers, and 22-seater buses. Fully maintained, safety audited, operator supported."
+        keywords="mine-compliant fleet, plant hire equipment, side tippers, excavators, TLBs, graders, construction equipment hire South Africa"
+        canonicalPath="/fleet"
+      />
       <Header />
       <main className="py-[100px]">
         <PageHeader

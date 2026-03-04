@@ -6,6 +6,7 @@ import { Testimonials } from "@/components/Testimonials";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, CarouselDots } from "@/components/ui/carousel";
 import { ArrowRight, Building, Pickaxe, Building2, Factory, Users } from "lucide-react";
+import { SEOHead } from "@/components/SEOHead";
 import Autoplay from "embla-carousel-autoplay";
 
 // Project images
@@ -72,6 +73,12 @@ const stats = [
 const ProjectsPage = () => {
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title="Projects & Clients | Mining, Government, Private Sector | SILABELE"
+        description="View SILABELE's completed projects and trusted clients including Glencore, Impala Platinum, Royal Bafokeng, WBHO, and government departments across South Africa."
+        keywords="construction projects South Africa, mining clients, Glencore contractor, Impala Platinum, road construction projects, civil engineering portfolio"
+        canonicalPath="/projects"
+      />
       <Header />
       <main>
         <PageHeader

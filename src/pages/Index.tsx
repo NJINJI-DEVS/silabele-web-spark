@@ -1,4 +1,5 @@
 import { Header } from "@/components/Header";
+import { SEOHead } from "@/components/SEOHead";
 import { Hero } from "@/components/Hero";
 import { Clients } from "@/components/Clients";
 import { Stats } from "@/components/Stats";
@@ -14,6 +15,12 @@ import { ArrowRight, Phone, CheckCircle } from "lucide-react";
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title="SILABELE Trading Enterprise | Infrastructure & Logistics Solutions"
+        description="SILABELE Trading Enterprise (STE) delivers reliable civil engineering, plant hire, road freight, and executive transport services across South Africa. 100% Black-owned, CIDB graded."
+        keywords="plant hire Rustenburg, civil engineering South Africa, mine-compliant fleet, infrastructure solutions, logistics, transport services, construction company South Africa, CIDB graded contractor"
+        canonicalPath="/"
+      />
       <Header />
       <main>
         <Hero />

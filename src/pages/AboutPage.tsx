@@ -1,4 +1,5 @@
 import { Header } from "@/components/Header";
+import { SEOHead } from "@/components/SEOHead";
 import { Footer } from "@/components/Footer";
 import { PageHeader } from "@/components/PageHeader";
 import { About } from "@/components/About";
@@ -36,6 +37,12 @@ const leadership = [
 const AboutPage = () => {
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title="About SILABELE Trading Enterprise | 100% Black-Owned, CIDB Graded"
+        description="Learn about SILABELE Trading Enterprise — a 100% Black-owned, family-led enterprise with 15+ years of experience in civil engineering, plant hire, and transport logistics across South Africa."
+        keywords="about Silabele, Black-owned construction company, CIDB 7CE grading, family-led enterprise, South Africa infrastructure"
+        canonicalPath="/about"
+      />
       <Header />
       <main>
         <PageHeader

@@ -7,21 +7,83 @@
     <title>SILABELE Trading Enterprise | Infrastructure & Logistics Solutions</title>
     <meta name="description" content="SILABELE Trading Enterprise (STE) delivers reliable civil engineering, plant hire, road freight, and executive transport services across South Africa. 100% Black-owned, CIDB graded." />
     <meta name="author" content="SILABELE Trading Enterprise" />
-    <meta name="keywords" content="plant hire Rustenburg, civil engineering South Africa, mine-compliant fleet, infrastructure solutions, logistics, transport services" />
+    <meta name="keywords" content="plant hire Rustenburg, civil engineering South Africa, mine-compliant fleet, infrastructure solutions, logistics, transport services, construction company, CIDB graded, bulk transport, earthmoving equipment" />
     
     <meta property="og:title" content="SILABELE Trading Enterprise | Infrastructure & Logistics" />
     <meta property="og:description" content="Reliable infrastructure and logistics solutions. Prompt. Professional. Proven. Plant hire, construction, freight, and transport services." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="/favicon.jpg" />
+    <meta property="og:url" content="https://silabele.com" />
+    <meta property="og:site_name" content="SILABELE Trading Enterprise" />
     
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:image" content="/favicon.jpg" />
     
     <link rel="canonical" href="https://silabele.com" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "SILABELE Trading Enterprise",
+      "alternateName": "STE",
+      "description": "100% Black-owned enterprise delivering reliable civil engineering, plant hire, road freight, and executive transport services across South Africa.",
+      "url": "https://silabele.com",
+      "logo": "https://silabele.com/favicon.jpg",
+      "telephone": "0861-555-058",
+      "email": "info@silabele.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Rustenburg",
+        "addressRegion": "North West",
+        "addressCountry": "ZA"
+      },
+      "areaServed": [
+        { "@type": "AdministrativeArea", "name": "North West" },
+        { "@type": "AdministrativeArea", "name": "Gauteng" },
+        { "@type": "AdministrativeArea", "name": "Limpopo" }
+      ],
+      "serviceType": [
+        "Civil Engineering",
+        "Plant Hire",
+        "Bulk Transport Logistics",
+        "Executive Shuttle Services",
+        "Construction Services",
+        "Technical Support Consulting"
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "16:30"
+      },
+      "sameAs": []
+    }
+    </script>
   </head>
 
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Preloader: auto-removed when React mounts -->
+      <style>
+        .preloader{position:fixed;inset:0;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#162d4a;gap:24px}
+        .preloader-logo{width:80px;height:80px;border-radius:16px;overflow:hidden;animation:pulse 1.5s ease-in-out infinite;box-shadow:0 0 40px rgba(232,119,46,0.3)}
+        .preloader-logo img{width:100%;height:100%;object-fit:contain}
+        .preloader-bar{width:200px;height:4px;background:rgba(255,255,255,0.1);border-radius:4px;overflow:hidden}
+        .preloader-bar-fill{height:100%;width:40%;background:linear-gradient(90deg,#e8772e,#f09050);border-radius:4px;animation:loading 1.2s ease-in-out infinite}
+        .preloader-text{color:rgba(255,255,255,0.6);font-family:sans-serif;font-size:13px;letter-spacing:2px;text-transform:uppercase}
+        @keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.05);opacity:0.85}}
+        @keyframes loading{0%{transform:translateX(-100%)}50%{transform:translateX(150%)}100%{transform:translateX(400%)}}
+      </style>
+      <div class="preloader">
+        <div class="preloader-logo">
+          <img src="/favicon.jpg" alt="Silabele Trading Enterprise" />
+        </div>
+        <div class="preloader-bar"><div class="preloader-bar-fill"></div></div>
+        <div class="preloader-text">Loading</div>
+      </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
