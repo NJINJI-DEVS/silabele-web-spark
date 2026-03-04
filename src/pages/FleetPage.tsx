@@ -90,7 +90,7 @@ const FleetPage = () => {
         <Fleet showCTA={false} />
 
         {/* Fleet Stats */}
-        <section className="py-16 bg-primary">
+        <section className="bg-primary py-[20px]">
           <div className="container-custom">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {fleetStats.map((stat) =>
