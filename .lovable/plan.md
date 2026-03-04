@@ -1,32 +1,44 @@
 
 
-## Set Up Contact Form Submission with Resend
+## Plan: Page Preloader, SPA Redirect Fix, and Full SEO Configuration
 
-### Prerequisites (Required Before Implementation)
+### 1. Page Preloader
 
-1. **Enable Lovable Cloud** — needed to deploy edge functions and store secrets securely. You'll need to enable this from the Cloud tab in the sidebar.
+Create a branded loading screen that displays before the React app mounts, using the Silabele navy/orange theme:
 
-2. **Get a Resend API Key** — sign up at [resend.com](https://resend.com), verify your domain (or use the free sandbox), and grab your API key.
+- **Add inline CSS + HTML preloader in `index.html`** inside the `#root` div (auto-removed when React mounts). It will show the Silabele logo with a pulsing animation and a simple loading bar in the accent orange color against a navy background.
+- No extra JS needed — React's `createRoot` replaces the `#root` innerHTML automatically.
 
-### Implementation Plan
+### 2. SPA Refresh Redirect Fix
 
-Once Cloud is enabled:
+The 404 on refresh happens because this is a single-page app using client-side routing (React Router), but the hosting server doesn't know to serve `index.html` for all routes.
 
-1. **Store the Resend API key** as a secret (`RESEND_API_KEY`)
+- **Create `public/_redirects`** file with the rule: `/* /index.html 200` — this is the standard fix for Lovable/Netlify-style hosting and ensures all routes serve the SPA.
 
-2. **Create an edge function** (`supabase/functions/send-contact-email/index.ts`) that:
-   - Receives form data (name, email, phone, service, message)
-   - Validates required fields
-   - Sends an email to `info@silabele.com` via Resend's API
-   - Returns success/error response
-   - Includes proper CORS headers
+### 3. Full SEO Configuration
 
-3. **Update `src/components/Contact.tsx`** to:
-   - Call the edge function instead of the simulated timeout
-   - Handle success/error responses with appropriate toast messages
-   - Show proper loading state during submission
+**Per-page meta tags:**
+- Create a reusable `SEOHead` component using `document.title` and meta tag manipulation (via `useEffect`) to set unique title, description, keywords, canonical URL, and Open Graph tags for each page.
+- Apply `SEOHead` to all 6 pages (Home, About, Services, Fleet, Projects, Contact) with tailored content.
 
-### Next Step
+**Sitemap:**
+- Create `public/sitemap.xml` listing all 6 pages with `lastmod`, `changefreq`, and `priority` values.
 
-Please enable **Lovable Cloud** from the Cloud tab in the sidebar, then let me know so we can proceed with the setup.
+**Robots.txt update:**
+- Add `Sitemap: https://silabele.com/sitemap.xml` directive to `public/robots.txt`.
+
+**Structured data:**
+- Add JSON-LD `LocalBusiness` schema markup in `index.html` for rich search results (company name, address, phone, services).
+
+### Technical Details
+
+| Task | Files |
+|------|-------|
+| Preloader | `index.html` (inline HTML/CSS in `#root`) |
+| SPA redirects | `public/_redirects` (new) |
+| SEO component | `src/components/SEOHead.tsx` (new) |
+| Per-page SEO | All 6 page files (add `<SEOHead>`) |
+| Sitemap | `public/sitemap.xml` (new) |
+| Robots.txt | `public/robots.txt` (update) |
+| Structured data | `index.html` (JSON-LD script) |
 
