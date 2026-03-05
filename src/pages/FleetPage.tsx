@@ -8,12 +8,9 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Wrench, Clock, CheckCircle, Phone, Award, Users } from "lucide-react";
 
 // Fleet images
-import excavatorImg from "@/assets/excavator-earthworks.jpg";
-import silabeleMining from "@/assets/silabele-mining-ops.jpg";
-import rollerGrader from "@/assets/roller-grader-road.jpg";
-import silabeleLoader from "@/assets/silabele-loader.jpg";
-import steExcavator from "@/assets/ste-excavator-kerbing.jpg";
-import asphaltChip from "@/assets/asphalt-chip-spreader.jpg";
+import steBrandedTruck from "@/assets/ste-branded-trucks.jpg";
+import fleetTippers from "@/assets/fleet-tippers.jpg";
+import fleetTrucks from "@/assets/fleet-trucks.jpg";
 
 const fleetFeatures = [
 {
@@ -118,56 +115,29 @@ const FleetPage = () => {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img src={silabeleMining} alt="Silabele loader at mining operations" className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img src={steBrandedTruck} alt="STE Silabele branded Volvo truck with side tippers" className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
-                    <h3 className="text-primary-foreground font-bold text-lg">Mining Operations</h3>
-                    <p className="text-primary-foreground/80 text-sm">Silabele branded fleet at work</p>
+                    <h3 className="text-primary-foreground font-bold text-lg">Volvo Globetrotter</h3>
+                    <p className="text-primary-foreground/80 text-sm">STE branded truck with side tippers</p>
                   </div>
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img src={excavatorImg} alt="CAT excavator performing earthworks" className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img src={fleetTippers} alt="Silabele Trading side tipper fleet" className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
-                    <h3 className="text-primary-foreground font-bold text-lg">Earthmoving</h3>
-                    <p className="text-primary-foreground/80 text-sm">Heavy-duty excavator operations</p>
+                    <h3 className="text-primary-foreground font-bold text-lg">Side Tipper Fleet</h3>
+                    <p className="text-primary-foreground/80 text-sm">Silabele branded tippers ready for deployment</p>
                   </div>
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img src={rollerGrader} alt="Roller and grader on road construction" className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img src={fleetTrucks} alt="Mercedes Actros truck with Silabele Trading tippers" className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
-                    <h3 className="text-primary-foreground font-bold text-lg">Road Compaction</h3>
-                    <p className="text-primary-foreground/80 text-sm">Roller and grader operations</p>
-                  </div>
-                </div>
-              </div>
-              <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img src={steExcavator} alt="STE excavator kerbing work" className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <div>
-                    <h3 className="text-primary-foreground font-bold text-lg">Kerbing & Earthworks</h3>
-                    <p className="text-primary-foreground/80 text-sm">STE branded excavators on site</p>
-                  </div>
-                </div>
-              </div>
-              <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img src={silabeleLoader} alt="Silabele front-end loader" className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <div>
-                    <h3 className="text-primary-foreground font-bold text-lg">Front-End Loaders</h3>
-                    <p className="text-primary-foreground/80 text-sm">Heavy-duty loading equipment</p>
-                  </div>
-                </div>
-              </div>
-              <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img src={asphaltChip} alt="Asphalt chip spreader at dusk" className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <div>
-                    <h3 className="text-primary-foreground font-bold text-lg">Chip Spreading</h3>
-                    <p className="text-primary-foreground/80 text-sm">Road surfacing equipment</p>
+                    <h3 className="text-primary-foreground font-bold text-lg">Mercedes Actros</h3>
+                    <p className="text-primary-foreground/80 text-sm">Bulk transport with interlink tippers</p>
                   </div>
                 </div>
               </div>
