@@ -10,8 +10,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Award, Users, Handshake, Clock, Cog } from "lucide-react";
 
 // Team images
-import teamPhoto from "@/assets/team-photo.jpg";
-import teamPhoto2 from "@/assets/team-photo-2.jpg";
+import teamPhoto from "@/assets/team-photo-new.jpg";
+import concreteSlab from "@/assets/concrete-slab-work.jpg";
 
 const certifications = [
   { icon: Shield, title: "100% Black-Owned", description: "Family-led Enterprise" },
@@ -116,8 +116,8 @@ const AboutPage = () => {
               </div>
               <div className="group relative overflow-hidden rounded-2xl shadow-xl">
                 <img 
-                  src={teamPhoto2} 
-                  alt="STE construction team" 
+                  src={concreteSlab} 
+                  alt="STE team working on concrete slab" 
                   className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent flex items-end p-8">

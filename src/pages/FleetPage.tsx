@@ -8,10 +8,10 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Wrench, Clock, CheckCircle, Phone, Award, Users } from "lucide-react";
 
 // Fleet images
-import fleetTrucks from "@/assets/fleet-trucks.jpg";
-import fleetTippers from "@/assets/fleet-tippers.jpg";
-import miningOperations from "@/assets/silabele-loader.jpg";
-import miningSite from "@/assets/mining-site.jpg";
+import excavatorImg from "@/assets/excavator-earthworks.jpg";
+import silabeleMining from "@/assets/silabele-mining-ops.jpg";
+import roadEquipment from "@/assets/road-equipment-new.jpg";
+import silabeleLoader from "@/assets/silabele-loader.jpg";
 
 const fleetFeatures = [
 {
@@ -128,53 +128,49 @@ const FleetPage = () => {
             <div className="grid md:grid-cols-2 gap-6">
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
                 <img
-                  src={fleetTrucks}
-                  alt="STE truck fleet - Daewoo and Mercedes trucks"
+                  src={silabeleMining}
+                  alt="Silabele loader at mining operations"
                   className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" />
-                
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <div>
-                    <h3 className="text-primary-foreground font-bold text-lg">Truck Fleet</h3>
-                    <p className="text-primary-foreground/80 text-sm">Modern trucks for all transport needs</p>
-                  </div>
-                </div>
-              </div>
-              <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img
-                  src={fleetTippers}
-                  alt="STE side tipper trailers"
-                  className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" />
-                
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <div>
-                    <h3 className="text-primary-foreground font-bold text-lg">Side Tippers</h3>
-                    <p className="text-primary-foreground/80 text-sm">34-ton capacity for bulk materials</p>
-                  </div>
-                </div>
-              </div>
-              <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img
-                  src={miningOperations}
-                  alt="STE equipment at mining operations"
-                  className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" />
-                
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
                     <h3 className="text-primary-foreground font-bold text-lg">Mining Operations</h3>
-                    <p className="text-primary-foreground/80 text-sm">Heavy-duty equipment for mining sites</p>
+                    <p className="text-primary-foreground/80 text-sm">Silabele branded fleet at work</p>
                   </div>
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
                 <img
-                  src={miningSite}
-                  alt="STE fleet at mining stockpile"
+                  src={excavatorImg}
+                  alt="CAT excavator performing earthworks"
                   className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" />
-                
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
-                    <h3 className="text-primary-foreground font-bold text-lg">Site Operations</h3>
-                    <p className="text-primary-foreground/80 text-sm">Fleet at work on active sites</p>
+                    <h3 className="text-primary-foreground font-bold text-lg">Earthmoving</h3>
+                    <p className="text-primary-foreground/80 text-sm">Heavy-duty excavator operations</p>
+                  </div>
+                </div>
+              </div>
+              <div className="group relative overflow-hidden rounded-xl shadow-lg">
+                <img
+                  src={silabeleLoader}
+                  alt="Silabele front-end loader on site"
+                  className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                  <div>
+                    <h3 className="text-primary-foreground font-bold text-lg">Front-End Loaders</h3>
+                    <p className="text-primary-foreground/80 text-sm">Heavy-duty loading equipment</p>
+                  </div>
+                </div>
+              </div>
+              <div className="group relative overflow-hidden rounded-xl shadow-lg">
+                <img
+                  src={roadEquipment}
+                  alt="Road construction equipment"
+                  className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                  <div>
+                    <h3 className="text-primary-foreground font-bold text-lg">Road Equipment</h3>
+                    <p className="text-primary-foreground/80 text-sm">Chip spreading and road construction</p>
                   </div>
                 </div>
               </div>
@@ -198,7 +194,6 @@ const FleetPage = () => {
               <div
                 key={feature.title}
                 className="bg-card p-6 rounded-xl border border-border shadow-md text-center hover:shadow-lg transition-shadow">
-                
                   <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-accent/10 mb-4">
                     <feature.icon className="h-7 w-7 text-accent" />
                   </div>
@@ -226,7 +221,6 @@ const FleetPage = () => {
               <div
                 key={category.category}
                 className="bg-card p-8 rounded-xl border border-border shadow-md">
-                
                   <h3 className="text-xl font-bold text-foreground mb-6 pb-4 border-b border-border">
                     {category.category}
                   </h3>
