@@ -11,6 +11,7 @@ import { ArrowRight, Shield, Wrench, Clock, CheckCircle, Phone, Award, Users } f
 import steBrandedTruck from "@/assets/ste-branded-trucks.jpg";
 import fleetTippers from "@/assets/fleet-tippers.jpg";
 import fleetTrucks from "@/assets/fleet-trucks.jpg";
+import silabeleLoader from "@/assets/silabele-loader.jpg";
 
 const fleetFeatures = [
 {
@@ -113,34 +114,17 @@ const FleetPage = () => {
               <span className="text-accent font-semibold uppercase tracking-wider text-sm">Our Equipment</span>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2">Fleet Gallery</h2>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img src={steBrandedTruck} alt="STE Silabele branded Volvo truck with side tippers" className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <div>
-                    <h3 className="text-primary-foreground font-bold text-lg">Volvo Globetrotter</h3>
-                    <p className="text-primary-foreground/80 text-sm">STE branded truck with side tippers</p>
-                  </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                { src: steBrandedTruck, alt: "Silabele branded truck with side tippers" },
+                { src: fleetTippers, alt: "Silabele side tipper fleet" },
+                { src: fleetTrucks, alt: "Silabele truck with interlink tippers" },
+                { src: silabeleLoader, alt: "Silabele loader loading side tipper" },
+              ].map((img, i) => (
+                <div key={i} className="group relative overflow-hidden rounded-xl shadow-lg">
+                  <img src={img.src} alt={img.alt} className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
-              </div>
-              <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img src={fleetTippers} alt="Silabele Trading side tipper fleet" className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <div>
-                    <h3 className="text-primary-foreground font-bold text-lg">Side Tipper Fleet</h3>
-                    <p className="text-primary-foreground/80 text-sm">Silabele branded tippers ready for deployment</p>
-                  </div>
-                </div>
-              </div>
-              <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img src={fleetTrucks} alt="Mercedes Actros truck with Silabele Trading tippers" className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <div>
-                    <h3 className="text-primary-foreground font-bold text-lg">Mercedes Actros</h3>
-                    <p className="text-primary-foreground/80 text-sm">Bulk transport with interlink tippers</p>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
