@@ -10,32 +10,16 @@ import { SEOHead } from "@/components/SEOHead";
 import Autoplay from "embla-carousel-autoplay";
 
 // Project images
-import concreteWork from "@/assets/concrete-work.jpg";
-import roadConstruction from "@/assets/road-construction.jpg";
-import roadPaving from "@/assets/road-paving.jpg";
-import roadEquipment from "@/assets/road-equipment.jpg";
-import roadProgress from "@/assets/road-development.jpg";
-import foundationWork from "@/assets/foundation-work.jpg";
-import aerialConstruction from "@/assets/aerial-construction.jpg";
-import completedBuilding from "@/assets/completed-building.jpg";
-import industrialBuilding from "@/assets/industrial-building.jpg";
-import catExcavator from "@/assets/cat-excavator.jpg";
-import steBrandedTrucks from "@/assets/ste-branded-trucks.jpg";
-import kitchenFinishes from "@/assets/kitchen-finishes.jpg";
-import concreteSlabFinishing from "@/assets/concrete-slab-finishing.jpg";
-import brickBuilding from "@/assets/brick-building.jpg";
-import graderRoadworks from "@/assets/grader-roadworks.jpg";
-import concreteDelivery from "@/assets/concrete-delivery.jpg";
-import rebarInstallation from "@/assets/rebar-installation.jpg";
-import loaderMining from "@/assets/loader-mining.jpg";
-import rollerGrader from "@/assets/roller-grader.jpg";
-import excavatorKerbing from "@/assets/excavator-kerbing.jpg";
-import completedRoad from "@/assets/completed-road.jpg";
-import asphaltPaver from "@/assets/asphalt-paver.jpg";
-import concretePumpAerial from "@/assets/concrete-pump-aerial.jpg";
-import industrialFoundation from "@/assets/industrial-foundation.jpg";
-import concretePouring from "@/assets/concrete-pouring.jpg";
-import stormwaterDrainage from "@/assets/stormwater-drainage.jpg";
+import completedBuilding from "@/assets/completed-building-aerial.jpg";
+import excavatorEarthworks from "@/assets/excavator-earthworks.jpg";
+import concreteSlab from "@/assets/concrete-slab-work.jpg";
+import drainageChannel from "@/assets/drainage-channel.jpg";
+import concretePouring from "@/assets/concrete-pouring-new.jpg";
+import industrialBuilding from "@/assets/industrial-building-new.jpg";
+import roadEquipment from "@/assets/road-equipment-new.jpg";
+import kitchenInterior from "@/assets/kitchen-interior.jpg";
+import silabeleMining from "@/assets/silabele-mining-ops.jpg";
+import teamPhoto from "@/assets/team-photo-new.jpg";
 
 // Client logos
 import glencore from "@/assets/clients/glencore.png";
@@ -57,18 +41,15 @@ const clients = [
 { name: "GEP", sector: "Government", logo: gep },
 { name: "Dept. of Health & Social Development", sector: "Government", logo: socialDevelopment }];
 
-
 const sectors = [
 { icon: Pickaxe, name: "Mining", description: "Earthworks, transport, and plant hire for mining operations" },
 { icon: Building, name: "Municipal", description: "Waste management and infrastructure development" },
 { icon: Building2, name: "Government", description: "Public works and community development" },
 { icon: Factory, name: "Private Sector", description: "Construction and logistics support" }];
 
-
 const stats = [
 { value: "100+", label: "Projects Completed" },
 { value: "15+", label: "Years Experience" }];
-
 
 const ProjectsPage = () => {
   return (
@@ -85,7 +66,6 @@ const ProjectsPage = () => {
           badge="Projects & Clients"
           title="Trusted by Industry Leaders"
           subtitle="We've partnered with some of South Africa's most recognized names in mining, engineering, and local government." />
-        
 
         {/* Stats */}
         <section className="py-12 bg-primary">
@@ -121,7 +101,6 @@ const ProjectsPage = () => {
               <div
                 key={sector.name}
                 className="bg-card p-6 rounded-xl shadow-md border border-border text-center card-hover">
-                
                   <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-accent/10 mb-4">
                     <sector.icon className="h-7 w-7 text-accent" />
                   </div>
@@ -154,10 +133,8 @@ const ProjectsPage = () => {
               Autoplay({
                 delay: 2500,
                 stopOnInteraction: false
-              })]
-              }
+              })]}
               className="w-full">
-              
               <CarouselContent className="-ml-4">
                 {clients.map((client) =>
                 <CarouselItem key={client.name} className="pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
@@ -167,7 +144,6 @@ const ProjectsPage = () => {
                         src={client.logo}
                         alt={`${client.name} logo`}
                         className="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300" />
-                      
                       </div>
                       <span className="text-foreground font-heading font-semibold text-sm text-center">
                         {client.name}
@@ -199,101 +175,9 @@ const ProjectsPage = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
                 <img
-                  src={foundationWork}
-                  alt="Foundation construction work"
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
-                
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <div>
-                    <h3 className="text-primary-foreground font-bold">Foundation Work</h3>
-                    <p className="text-primary-foreground/80 text-sm">Structural concrete foundations</p>
-                  </div>
-                </div>
-              </div>
-              <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img
-                  src={concreteWork}
-                  alt="Concrete pouring on site"
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
-                
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <div>
-                    <h3 className="text-primary-foreground font-bold">Concrete Works</h3>
-                    <p className="text-primary-foreground/80 text-sm">Professional concrete placement</p>
-                  </div>
-                </div>
-              </div>
-              <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img
-                  src={roadConstruction}
-                  alt="Road construction with roller and grader"
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
-                
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <div>
-                    <h3 className="text-primary-foreground font-bold">Road Construction</h3>
-                    <p className="text-primary-foreground/80 text-sm">Earthworks and grading</p>
-                  </div>
-                </div>
-              </div>
-              
-
-
-
-
-
-
-
-
-
-
-
-              
-              <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img
-                  src={roadEquipment}
-                  alt="Road construction equipment in action"
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
-                
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <div>
-                    <h3 className="text-primary-foreground font-bold">Infrastructure Projects</h3>
-                    <p className="text-primary-foreground/80 text-sm">Civil engineering excellence</p>
-                  </div>
-                </div>
-              </div>
-              <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img
-                  src={roadProgress}
-                  alt="Road construction progress"
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
-                
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <div>
-                    <h3 className="text-primary-foreground font-bold">Road Development</h3>
-                    <p className="text-primary-foreground/80 text-sm">Quality road infrastructure</p>
-                  </div>
-                </div>
-              </div>
-              <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img
-                  src={aerialConstruction}
-                  alt="Aerial view of construction site"
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
-                
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <div>
-                    <h3 className="text-primary-foreground font-bold">Site Operations</h3>
-                    <p className="text-primary-foreground/80 text-sm">Large-scale concrete works</p>
-                  </div>
-                </div>
-              </div>
-              <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img
                   src={completedBuilding}
-                  alt="Completed building project"
+                  alt="Completed building aerial view"
                   className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
-                
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
                     <h3 className="text-primary-foreground font-bold">Completed Buildings</h3>
@@ -303,23 +187,9 @@ const ProjectsPage = () => {
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
                 <img
-                  src={industrialBuilding}
-                  alt="Industrial building construction"
+                  src={excavatorEarthworks}
+                  alt="CAT excavator performing earthworks"
                   className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
-                
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <div>
-                    <h3 className="text-primary-foreground font-bold">Industrial Buildings</h3>
-                    <p className="text-primary-foreground/80 text-sm">Commercial construction</p>
-                  </div>
-                </div>
-              </div>
-              <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img
-                  src={catExcavator}
-                  alt="CAT excavator at work"
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
-                
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
                     <h3 className="text-primary-foreground font-bold">Earthmoving</h3>
@@ -327,77 +197,35 @@ const ProjectsPage = () => {
                   </div>
                 </div>
               </div>
-              
-
-
-
-
-
-
-
-
-
-
-
-              
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
                 <img
-                  src={kitchenFinishes}
-                  alt="Interior finishing work"
+                  src={drainageChannel}
+                  alt="Stormwater drainage channel construction"
                   className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
-                
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
-                    <h3 className="text-primary-foreground font-bold">Interior Finishes</h3>
-                    <p className="text-primary-foreground/80 text-sm">Quality interior works</p>
+                    <h3 className="text-primary-foreground font-bold">Drainage & Infrastructure</h3>
+                    <p className="text-primary-foreground/80 text-sm">Stormwater channel construction</p>
                   </div>
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
                 <img
-                  src={concreteSlabFinishing}
-                  alt="Workers finishing concrete slab"
+                  src={concreteSlab}
+                  alt="Workers finishing concrete slab at industrial site"
                   className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
-                
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
-                    <h3 className="text-primary-foreground font-bold">Concrete Finishing</h3>
-                    <p className="text-primary-foreground/80 text-sm">Precision slab work</p>
+                    <h3 className="text-primary-foreground font-bold">Concrete Works</h3>
+                    <p className="text-primary-foreground/80 text-sm">Industrial slab finishing</p>
                   </div>
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
                 <img
-                  src={brickBuilding}
-                  alt="Completed brick building"
+                  src={concretePouring}
+                  alt="Concrete mixer truck pouring concrete"
                   className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
-                
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <div>
-                    <h3 className="text-primary-foreground font-bold">Building Construction</h3>
-                    <p className="text-primary-foreground/80 text-sm">Quality brick structures</p>
-                  </div>
-                </div>
-              </div>
-              <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img
-                  src={graderRoadworks}
-                  alt="Grader performing roadworks"
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
-                
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <div>
-                    <h3 className="text-primary-foreground font-bold">Road Grading</h3>
-                    <p className="text-primary-foreground/80 text-sm">Professional earthworks</p>
-                  </div>
-                </div>
-              </div>
-              <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img
-                  src={concreteDelivery}
-                  alt="Concrete mixer truck delivering concrete"
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
-                
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
                     <h3 className="text-primary-foreground font-bold">Concrete Delivery</h3>
@@ -407,131 +235,61 @@ const ProjectsPage = () => {
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
                 <img
-                  src={rebarInstallation}
-                  alt="Steel reinforcement installation"
+                  src={industrialBuilding}
+                  alt="Completed industrial building"
                   className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
-                
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
-                    <h3 className="text-primary-foreground font-bold">Steel Reinforcement</h3>
-                    <p className="text-primary-foreground/80 text-sm">Industrial rebar work</p>
+                    <h3 className="text-primary-foreground font-bold">Industrial Buildings</h3>
+                    <p className="text-primary-foreground/80 text-sm">Commercial construction</p>
                   </div>
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
                 <img
-                  src={loaderMining}
-                  alt="Front-end loader at mining site"
+                  src={roadEquipment}
+                  alt="Road construction equipment"
                   className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
-                
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                  <div>
+                    <h3 className="text-primary-foreground font-bold">Road Construction</h3>
+                    <p className="text-primary-foreground/80 text-sm">Chip spreading and surfacing</p>
+                  </div>
+                </div>
+              </div>
+              <div className="group relative overflow-hidden rounded-xl shadow-lg">
+                <img
+                  src={kitchenInterior}
+                  alt="Interior finishing work"
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                  <div>
+                    <h3 className="text-primary-foreground font-bold">Interior Finishes</h3>
+                    <p className="text-primary-foreground/80 text-sm">Quality interior works</p>
+                  </div>
+                </div>
+              </div>
+              <div className="group relative overflow-hidden rounded-xl shadow-lg">
+                <img
+                  src={silabeleMining}
+                  alt="Silabele loader at mining operations"
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
                     <h3 className="text-primary-foreground font-bold">Mining Operations</h3>
-                    <p className="text-primary-foreground/80 text-sm">Heavy loader at mining site</p>
+                    <p className="text-primary-foreground/80 text-sm">Silabele fleet at mining site</p>
                   </div>
                 </div>
               </div>
-              <div className="group relative overflow-hidden rounded-xl shadow-lg">
+              <div className="group relative overflow-hidden rounded-xl shadow-lg md:col-span-2 lg:col-span-3">
                 <img
-                  src={rollerGrader}
-                  alt="Roller and grader on road construction"
+                  src={teamPhoto}
+                  alt="STE construction team"
                   className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
-                
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
-                    <h3 className="text-primary-foreground font-bold">Road Compaction</h3>
-                    <p className="text-primary-foreground/80 text-sm">Roller and grader operations</p>
-                  </div>
-                </div>
-              </div>
-              <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img
-                  src={excavatorKerbing}
-                  alt="Excavator and workers installing kerbing"
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
-                
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <div>
-                    <h3 className="text-primary-foreground font-bold">Kerbing & Drainage</h3>
-                    <p className="text-primary-foreground/80 text-sm">Community road infrastructure</p>
-                  </div>
-                </div>
-              </div>
-              <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img
-                  src={completedRoad}
-                  alt="Completed rural road"
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
-                
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <div>
-                    <h3 className="text-primary-foreground font-bold">Completed Road</h3>
-                    <p className="text-primary-foreground/80 text-sm">Quality rural road delivery</p>
-                  </div>
-                </div>
-              </div>
-              <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img
-                  src={asphaltPaver}
-                  alt="Asphalt paving machine at work"
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
-                
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <div>
-                    <h3 className="text-primary-foreground font-bold">Asphalt Paving</h3>
-                    <p className="text-primary-foreground/80 text-sm">Road surfacing operations</p>
-                  </div>
-                </div>
-              </div>
-              <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img
-                  src={concretePumpAerial}
-                  alt="Aerial view of concrete pump on site"
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
-                
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <div>
-                    <h3 className="text-primary-foreground font-bold">Concrete Pumping</h3>
-                    <p className="text-primary-foreground/80 text-sm">Aerial concrete placement</p>
-                  </div>
-                </div>
-              </div>
-              <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img
-                  src={industrialFoundation}
-                  alt="Industrial foundation rebar installation"
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
-                
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <div>
-                    <h3 className="text-primary-foreground font-bold">Industrial Foundations</h3>
-                    <p className="text-primary-foreground/80 text-sm">Large-scale rebar preparation</p>
-                  </div>
-                </div>
-              </div>
-              <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img
-                  src={concretePouring}
-                  alt="Workers pouring concrete"
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
-                
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <div>
-                    <h3 className="text-primary-foreground font-bold">Concrete Pouring</h3>
-                    <p className="text-primary-foreground/80 text-sm">Hands-on concrete placement</p>
-                  </div>
-                </div>
-              </div>
-              <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img
-                  src={stormwaterDrainage}
-                  alt="Stormwater drainage channel construction"
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
-                
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <div>
-                    <h3 className="text-primary-foreground font-bold">Stormwater Drainage</h3>
-                    <p className="text-primary-foreground/80 text-sm">Channel construction works</p>
+                    <h3 className="text-primary-foreground font-bold">Our Team</h3>
+                    <p className="text-primary-foreground/80 text-sm">Dedicated professionals delivering excellence</p>
                   </div>
                 </div>
               </div>
@@ -563,7 +321,6 @@ const ProjectsPage = () => {
       </main>
       <Footer />
     </div>);
-
 };
 
 export default ProjectsPage;

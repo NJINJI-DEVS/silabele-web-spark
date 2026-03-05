@@ -8,12 +8,12 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Phone, FileText, Cog, Truck, Users, ClipboardCheck } from "lucide-react";
 
 // Service images
-import asphaltPaving from "@/assets/asphalt-paving.jpg";
-import stormwaterDrainage from "@/assets/stormwater-drainage.jpg";
-import concretePouring from "@/assets/concrete-pouring.jpg";
-import industrialFoundation from "@/assets/industrial-foundation.jpg";
-import concreteFinishing from "@/assets/concrete-finishing.jpg";
-import completedRoad from "@/assets/completed-road.jpg";
+import roadEquipment from "@/assets/road-equipment-new.jpg";
+import drainageChannel from "@/assets/drainage-channel.jpg";
+import concreteSlab from "@/assets/concrete-slab-work.jpg";
+import industrialBuilding from "@/assets/industrial-building-new.jpg";
+import concretePouring from "@/assets/concrete-pouring-new.jpg";
+import completedBuilding from "@/assets/completed-building-aerial.jpg";
 
 const processSteps = [
   {
@@ -120,21 +120,21 @@ const ServicesPage = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
                 <img
-                  src={asphaltPaving}
-                  alt="Asphalt paving works"
+                  src={roadEquipment}
+                  alt="Road construction equipment"
                   className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
-                    <h3 className="text-primary-foreground font-bold">Asphalt Paving</h3>
-                    <p className="text-primary-foreground/80 text-sm">Road surfacing works</p>
+                    <h3 className="text-primary-foreground font-bold">Road Construction</h3>
+                    <p className="text-primary-foreground/80 text-sm">Chip spreading and surfacing</p>
                   </div>
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
                 <img
-                  src={stormwaterDrainage}
-                  alt="Stormwater drainage construction"
+                  src={drainageChannel}
+                  alt="Stormwater drainage channel construction"
                   className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
@@ -147,7 +147,7 @@ const ServicesPage = () => {
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
                 <img
                   src={concretePouring}
-                  alt="Concrete pouring operations"
+                  alt="Concrete pouring from mixer truck"
                   className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
@@ -159,21 +159,21 @@ const ServicesPage = () => {
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
                 <img
-                  src={industrialFoundation}
-                  alt="Industrial foundation construction"
+                  src={industrialBuilding}
+                  alt="Completed industrial building"
                   className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
                     <h3 className="text-primary-foreground font-bold">Industrial Projects</h3>
-                    <p className="text-primary-foreground/80 text-sm">Large-scale foundations</p>
+                    <p className="text-primary-foreground/80 text-sm">Commercial building construction</p>
                   </div>
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
                 <img
-                  src={concreteFinishing}
-                  alt="Concrete finishing work"
+                  src={concreteSlab}
+                  alt="Workers finishing concrete slab"
                   className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
@@ -185,14 +185,14 @@ const ServicesPage = () => {
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
                 <img
-                  src={completedRoad}
-                  alt="Completed road project"
+                  src={completedBuilding}
+                  alt="Completed building project aerial view"
                   className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div>
-                    <h3 className="text-primary-foreground font-bold">Completed Roads</h3>
-                    <p className="text-primary-foreground/80 text-sm">Quality road infrastructure</p>
+                    <h3 className="text-primary-foreground font-bold">Completed Buildings</h3>
+                    <p className="text-primary-foreground/80 text-sm">Quality construction delivery</p>
                   </div>
                 </div>
               </div>

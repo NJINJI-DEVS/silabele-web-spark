@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/asphalt-paving.jpg";
+import heroImage from "@/assets/road-equipment-new.jpg";
 
 export const Hero = () => {
   return (
@@ -10,7 +10,7 @@ export const Hero = () => {
       <div className="absolute inset-0">
         <img
           src={heroImage}
-          alt="Construction site with heavy machinery"
+          alt="Road construction equipment on active site"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-hero-overlay" />
@@ -19,7 +19,6 @@ export const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container-custom text-center md:text-left py-32">
         <div className="max-w-3xl">
-          {/* Badge */}
           {/* Headline */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground leading-tight mb-6 animate-fade-in-up">
             Experts in Prompt and{" "}
