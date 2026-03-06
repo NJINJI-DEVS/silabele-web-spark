@@ -8,7 +8,7 @@ export const PageHeader = ({ title, subtitle, badge }: PageHeaderProps) => {
   return (
     <section className="relative py-24 md:py-32 bg-primary overflow-hidden">
       <div className="absolute inset-0 bg-[url('/placeholder.svg')] opacity-5" />
-      <div className="container-custom relative z-10 text-center py-[50px]">
+      <div className="container-custom relative z-10 text-center mx-0 py-[51px]">
         {badge &&
         <span className="inline-block text-accent font-semibold uppercase tracking-wider text-sm mb-4">
             {badge}
