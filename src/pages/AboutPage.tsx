@@ -9,8 +9,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Award, Users, Handshake, Clock, Cog } from "lucide-react";
 
-import teamPhoto from "@/assets/team-photo-new.jpg";
-import concreteFoundation from "@/assets/concrete-foundation-pour.jpg";
+import teamPhoto from "@/assets/silabele-team.png";
 
 const certifications = [
   { icon: Shield, title: "100% Black-Owned", description: "Family-led Enterprise" },
@@ -69,22 +68,13 @@ const AboutPage = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2">The People Behind Our Success</h2>
               <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">A dedicated workforce committed to excellence, safety, and delivering quality results on every project.</p>
             </div>
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="mb-12">
               <div className="group relative overflow-hidden rounded-2xl shadow-xl">
-                <img src={teamPhoto} alt="STE team members at project site" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img src={teamPhoto} alt="Silabele Trading Enterprise team members" className="w-full h-96 object-cover group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent flex items-end p-8">
                   <div>
                     <h3 className="text-primary-foreground font-bold text-xl">Our Dedicated Team</h3>
                     <p className="text-primary-foreground/80">50+ skilled professionals across all divisions</p>
-                  </div>
-                </div>
-              </div>
-              <div className="group relative overflow-hidden rounded-2xl shadow-xl">
-                <img src={concreteFoundation} alt="Workers pouring concrete foundation" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500" />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent flex items-end p-8">
-                  <div>
-                    <h3 className="text-primary-foreground font-bold text-xl">Safety First Culture</h3>
-                    <p className="text-primary-foreground/80">Certified operators with mine-compliant training</p>
                   </div>
                 </div>
               </div>
