@@ -8,12 +8,9 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle, Phone, FileText, Cog, Truck, Users, ClipboardCheck } from "lucide-react";
 
 // Service images
-import asphaltPaving from "@/assets/asphalt-paving-crew.jpg";
-import stormwaterChannels from "@/assets/stormwater-channels.jpg";
-import concreteFoundation from "@/assets/concrete-foundation-pour.jpg";
-import industrialRebar from "@/assets/industrial-rebar.jpg";
-import concreteSlab from "@/assets/concrete-slab-work.jpg";
-import completedRoad from "@/assets/completed-rural-road.jpg";
+import asphaltPaving from "@/assets/asphalt-paving-new.png";
+import concreteWorks from "@/assets/concrete-works-new.png";
+import stormwaterSystems from "@/assets/stormwater-system-new.png";
 
 const processSteps = [
   { icon: Phone, step: "01", title: "Initial Consultation", description: "Contact us to discuss your project requirements, timeline, and specifications." },
@@ -65,33 +62,15 @@ const ServicesPage = () => {
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img src={stormwaterChannels} alt="Stormwater drainage channel construction" className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <div><h3 className="text-primary-foreground font-bold">Stormwater Systems</h3><p className="text-primary-foreground/80 text-sm">Drainage infrastructure</p></div>
-                </div>
-              </div>
-              <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img src={concreteFoundation} alt="Concrete foundation pouring" className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img src={concreteWorks} alt="Concrete works and foundation pouring" className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div><h3 className="text-primary-foreground font-bold">Concrete Works</h3><p className="text-primary-foreground/80 text-sm">Foundation construction</p></div>
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img src={industrialRebar} alt="Industrial rebar installation" className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img src={stormwaterSystems} alt="Stormwater drainage channel construction" className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <div><h3 className="text-primary-foreground font-bold">Industrial Projects</h3><p className="text-primary-foreground/80 text-sm">Large-scale rebar and foundations</p></div>
-                </div>
-              </div>
-              <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img src={concreteSlab} alt="Workers finishing concrete slab" className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <div><h3 className="text-primary-foreground font-bold">Concrete Finishing</h3><p className="text-primary-foreground/80 text-sm">Quality surface finishes</p></div>
-                </div>
-              </div>
-              <div className="group relative overflow-hidden rounded-xl shadow-lg">
-                <img src={completedRoad} alt="Completed rural road" className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <div><h3 className="text-primary-foreground font-bold">Completed Roads</h3><p className="text-primary-foreground/80 text-sm">Quality road infrastructure</p></div>
+                  <div><h3 className="text-primary-foreground font-bold">Stormwater Systems</h3><p className="text-primary-foreground/80 text-sm">Drainage infrastructure</p></div>
                 </div>
               </div>
             </div>
