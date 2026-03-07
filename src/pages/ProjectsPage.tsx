@@ -9,28 +9,17 @@ import { ArrowRight, Building, Pickaxe, Building2, Factory, Users } from "lucide
 import { SEOHead } from "@/components/SEOHead";
 import Autoplay from "embla-carousel-autoplay";
 
-// Project images - batch 1
-import completedBuilding from "@/assets/completed-building-aerial.jpg";
-import excavatorEarthworks from "@/assets/excavator-earthworks.jpg";
-import concreteSlab from "@/assets/concrete-slab-work.jpg";
-import drainageChannel from "@/assets/drainage-channel.jpg";
-import concretePouring from "@/assets/concrete-pouring-new.jpg";
-import industrialBuilding from "@/assets/industrial-building-new.jpg";
-import roadEquipment from "@/assets/road-equipment-new.jpg";
-import kitchenInterior from "@/assets/kitchen-interior.jpg";
-import silabeleMining from "@/assets/silabele-mining-ops.jpg";
-import teamPhoto from "@/assets/team-photo-new.jpg";
-
-// Project images - batch 2
-import rollerGrader from "@/assets/roller-grader-road.jpg";
-import steExcavator from "@/assets/ste-excavator-kerbing.jpg";
-import completedRoad from "@/assets/completed-rural-road.jpg";
-import asphaltChip from "@/assets/asphalt-chip-spreader.jpg";
-import aerialPump from "@/assets/aerial-concrete-pump.jpg";
-import industrialRebar from "@/assets/industrial-rebar.jpg";
-import asphaltPaving from "@/assets/asphalt-paving-crew.jpg";
-import concreteFoundation from "@/assets/concrete-foundation-pour.jpg";
-import stormwaterChannels from "@/assets/stormwater-channels.jpg";
+// Project images
+import completeBuilding from "@/assets/complete-building.png";
+import concreteDelivery from "@/assets/concrete-delivery-new.png";
+import concreteFinishing from "@/assets/concrete-finishing-new.png";
+import earthmoving from "@/assets/earthmoving.png";
+import foundationWork from "@/assets/foundation-work-new.png";
+import industrialBuilding from "@/assets/industrial-building-green.png";
+import infrastructureProjects from "@/assets/infrastructure-projects.png";
+import interiorFinishes from "@/assets/interior-finishes.png";
+import materialsTransport from "@/assets/materials-transport.png";
+import teamPhoto from "@/assets/silabele-team.png";
 
 // Client logos
 import glencore from "@/assets/clients/glencore.png";
@@ -63,24 +52,15 @@ const stats = [
 { value: "15+", label: "Years Experience" }];
 
 const galleryImages = [
-  { src: completedBuilding, alt: "Completed building aerial view", title: "Completed Buildings", desc: "Turnkey construction projects" },
-  { src: asphaltPaving, alt: "Asphalt paving crew", title: "Asphalt Paving", desc: "Road surfacing operations" },
-  { src: drainageChannel, alt: "Drainage channel construction", title: "Drainage & Infrastructure", desc: "Stormwater channel construction" },
-  { src: concreteSlab, alt: "Concrete slab finishing", title: "Concrete Works", desc: "Industrial slab finishing" },
-  { src: aerialPump, alt: "Aerial concrete pump on foundation", title: "Concrete Pumping", desc: "Aerial concrete placement" },
-  { src: industrialBuilding, alt: "Industrial building", title: "Industrial Buildings", desc: "Commercial construction" },
-  { src: excavatorEarthworks, alt: "CAT excavator earthworks", title: "Earthmoving", desc: "Heavy equipment operations" },
-  { src: steExcavator, alt: "STE excavator kerbing", title: "Kerbing Works", desc: "Community road infrastructure" },
-  { src: rollerGrader, alt: "Roller and grader on road", title: "Road Compaction", desc: "Roller and grader operations" },
-  { src: concretePouring, alt: "Concrete mixer truck pouring", title: "Concrete Delivery", desc: "On-site concrete pouring" },
-  { src: concreteFoundation, alt: "Foundation concrete pour", title: "Foundation Work", desc: "Structural concrete foundations" },
-  { src: industrialRebar, alt: "Industrial rebar installation", title: "Steel Reinforcement", desc: "Industrial rebar preparation" },
-  { src: roadEquipment, alt: "Road construction equipment", title: "Road Equipment", desc: "Chip spreading and surfacing" },
-  { src: stormwaterChannels, alt: "Stormwater channel finishing", title: "Stormwater Channels", desc: "Drainage system construction" },
-  { src: completedRoad, alt: "Completed rural road", title: "Completed Roads", desc: "Quality road delivery" },
-  { src: asphaltChip, alt: "Chip spreader at dusk", title: "Chip Spreading", desc: "Road surface preparation" },
-  { src: kitchenInterior, alt: "Interior finishing work", title: "Interior Finishes", desc: "Quality interior works" },
-  { src: silabeleMining, alt: "Silabele loader at mining site", title: "Mining Operations", desc: "Silabele fleet at mining site" },
+  { src: completeBuilding, alt: "Completed building with paved surrounds", title: "Completed Buildings", desc: "Turnkey construction projects" },
+  { src: concreteDelivery, alt: "Concrete delivery and pouring on site", title: "Concrete Delivery", desc: "On-site concrete pouring" },
+  { src: concreteFinishing, alt: "Workers finishing concrete slab", title: "Concrete Finishing", desc: "Industrial slab finishing" },
+  { src: earthmoving, alt: "Excavator performing earthworks", title: "Earthmoving", desc: "Heavy equipment operations" },
+  { src: foundationWork, alt: "Foundation and drainage channel work", title: "Foundation Work", desc: "Structural concrete foundations" },
+  { src: industrialBuilding, alt: "Industrial building construction", title: "Industrial Buildings", desc: "Commercial construction" },
+  { src: infrastructureProjects, alt: "Road infrastructure equipment", title: "Infrastructure Projects", desc: "Road and civil works" },
+  { src: interiorFinishes, alt: "Interior finishing work", title: "Interior Finishes", desc: "Quality interior works" },
+  { src: materialsTransport, alt: "Silabele loader transporting materials", title: "Materials Transport", desc: "Fleet logistics operations" },
 ];
 
 const ProjectsPage = () => {
