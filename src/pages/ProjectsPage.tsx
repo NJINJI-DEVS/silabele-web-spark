@@ -19,6 +19,12 @@ import industrialBuilding from "@/assets/industrial-building-green.png";
 import infrastructureProjects from "@/assets/infrastructure-projects.png";
 import interiorFinishes from "@/assets/interior-finishes.png";
 import materialsTransport from "@/assets/materials-transport.png";
+import roadConstruction from "@/assets/road-construction-new.png";
+import roadDevelopment from "@/assets/road-development-new.png";
+import roadGrading from "@/assets/road-grading.png";
+import roadSurfacing from "@/assets/road-surfacing.png";
+import siteOperations from "@/assets/site-operations.png";
+import steelReinforcement from "@/assets/steel-reinforcement-new.png";
 import teamPhoto from "@/assets/silabele-team.png";
 
 // Client logos
@@ -61,6 +67,12 @@ const galleryImages = [
   { src: infrastructureProjects, alt: "Road infrastructure equipment", title: "Infrastructure Projects", desc: "Road and civil works" },
   { src: interiorFinishes, alt: "Interior finishing work", title: "Interior Finishes", desc: "Quality interior works" },
   { src: materialsTransport, alt: "Silabele loader transporting materials", title: "Materials Transport", desc: "Fleet logistics operations" },
+  { src: roadConstruction, alt: "Road construction equipment in operation", title: "Road Construction", desc: "Heavy machinery on site" },
+  { src: roadDevelopment, alt: "Road development and excavation", title: "Road Development", desc: "Excavation and site preparation" },
+  { src: roadGrading, alt: "Road grading operations", title: "Road Grading", desc: "Surface leveling and grading" },
+  { src: roadSurfacing, alt: "Road surfacing crew", title: "Road Surfacing", desc: "Asphalt and aggregate laying" },
+  { src: siteOperations, alt: "Aerial view of site operations", title: "Site Operations", desc: "Large scale concrete pumping" },
+  { src: steelReinforcement, alt: "Steel reinforcement installation", title: "Steel Reinforcement", desc: "Rebar grid preparation" },
 ];
 
 const ProjectsPage = () => {
