@@ -70,7 +70,7 @@ const AboutPage = () => {
             </div>
             <div className="mb-12">
               <div className="group relative overflow-hidden rounded-2xl shadow-xl">
-                <img src={teamPhoto} alt="Silabele Trading Enterprise team members" className="w-full h-[28rem] md:h-[36rem] object-contain bg-secondary group-hover:scale-105 transition-transform duration-500" />
+                <img src={teamPhoto} alt="Silabele Trading Enterprise team members" className="w-full h-[28rem] md:h-[36rem] object-cover object-top group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent flex items-end p-8">
                   <div>
                     <h3 className="text-primary-foreground font-bold text-xl">Our Dedicated Team</h3>
