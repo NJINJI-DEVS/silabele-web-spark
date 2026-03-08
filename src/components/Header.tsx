@@ -77,7 +77,7 @@ export const Header = () => {
                 to={item.href}
                 className={`nav-link font-medium ${
                   showTransparent ? "text-primary-foreground" : "text-foreground"
-                } ${location.pathname === item.href ? "text-accent" : ""}`}
+                } ${location.pathname === item.href ? "text-accent border-b-2 border-accent pb-1" : ""}`}
               >
                 {item.name}
               </Link>
