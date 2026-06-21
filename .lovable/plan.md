@@ -1,44 +1,86 @@
+## Heads up on "remix"
 
+Remixing is a user action (sidebar/project menu → **Remix**) — I can't trigger it from chat. Once you've remixed, I'll apply the plan below to the new copy. If you'd rather I apply it to this current project instead, just say so.
 
-## Plan: Page Preloader, SPA Redirect Fix, and Full SEO Configuration
+## Brand direction
 
-### 1. Page Preloader
+**Colors (from logo):**
+- Primary Navy: `#16335B` (deep navy from logo outline + wordmark)
+- Accent Yellow: `#F2B500` (excavator yellow)
+- Secondary Blue: `#3DA9E0` (water ripple highlight)
+- Neutrals: white background, slate text
 
-Create a branded loading screen that displays before the React app mounts, using the Silabele navy/orange theme:
+These replace the current navy/orange tokens in `src/index.css` and `tailwind.config.ts`. The header logo invert trick will be removed since the new logo is multi-color.
 
-- **Add inline CSS + HTML preloader in `index.html`** inside the `#root` div (auto-removed when React mounts). It will show the Silabele logo with a pulsing animation and a simple loading bar in the accent orange color against a navy background.
-- No extra JS needed — React's `createRoot` replaces the `#root` innerHTML automatically.
+**Logo:** Use the uploaded `Designer (25).png` as `src/assets/twin-brothers-logo.png` and as favicon/OG image.
 
-### 2. SPA Refresh Redirect Fix
+**Typography:** Keep Montserrat (heading) / Open Sans (body) — fits the bold industrial wordmark.
 
-The 404 on refresh happens because this is a single-page app using client-side routing (React Router), but the hosting server doesn't know to serve `index.html` for all routes.
+## Content population (from business profile)
 
-- **Create `public/_redirects`** file with the rule: `/* /index.html 200` — this is the standard fix for Lovable/Netlify-style hosting and ensures all routes serve the SPA.
+**Company identity**
+- Name: Twin Brothers Construction 69 (Pty) Ltd
+- Tagline: "Excellence Through Safety and Commitment"
+- Founded: December 2003 (registered Pty 2012)
+- 100% HDI-owned, 100% HDI management, 80% HDI employed
+- Reg No: 2012/104738/07
 
-### 3. Full SEO Configuration
+**Contact**
+- Address: 17 Cnr Water & Orange Str, Parys, 9585
+- Mobile: 071 627 2716
+- Office: 056 817 1075
+- Fax: 086 232 7394
+- Email: zan.mqhaisa@gmail.com
 
-**Per-page meta tags:**
-- Create a reusable `SEOHead` component using `document.title` and meta tag manipulation (via `useEffect`) to set unique title, description, keywords, canonical URL, and Open Graph tags for each page.
-- Apply `SEOHead` to all 6 pages (Home, About, Services, Fleet, Projects, Contact) with tailored content.
+**About / Vision / Mission** — pulled verbatim from profile (steel fabrication, manufacturing, construction & development; national reach across South Africa; hands-on management).
 
-**Sitemap:**
-- Create `public/sitemap.xml` listing all 6 pages with `lastmod`, `changefreq`, and `priority` values.
+**Services page** (replaces current 5 services):
+1. Building Construction
+2. Steel Fabrication & Installations
+3. Project Management
+4. Onsite Maintenance
+5. Major Rebuilds on Frames
+6. Structural Work & Erection
+7. Cattle Handling Facilities
+8. Fire Prevention Facilities
 
-**Robots.txt update:**
-- Add `Sitemap: https://silabele.com/sitemap.xml` directive to `public/robots.txt`.
+**Leadership** (About page team section):
+- Petrus Zanepe Moqhaisa — General Manager & Co-founder
+- Amoni Frank Khoza — Operational Manager & Co-founder
 
-**Structured data:**
-- Add JSON-LD `LocalBusiness` schema markup in `index.html` for rich search results (company name, address, phone, services).
+**Projects page** — replace with the 11-row track record table (grower unit & effluent dam, loading ramp, cattle handling, Cosira steelworks, Afrox stainless pipeline, Cornelia classrooms, Dept of Education admin blocks, CMS Water Engineering, Tokoloho 315mm PVC pipeline, Leeudoringstad pump station, Tambo pumpstation refurbishment) with duration + value.
 
-### Technical Details
+**Credentials strip** (footer / about):
+NHBRC 7872-151113 · CIDB GB/CE/PE CRS 10004167 · B-BBEE EME L3 · Tax Cleared
 
-| Task | Files |
-|------|-------|
-| Preloader | `index.html` (inline HTML/CSS in `#root`) |
-| SPA redirects | `public/_redirects` (new) |
-| SEO component | `src/components/SEOHead.tsx` (new) |
-| Per-page SEO | All 6 page files (add `<SEOHead>`) |
-| Sitemap | `public/sitemap.xml` (new) |
-| Robots.txt | `public/robots.txt` (update) |
-| Structured data | `index.html` (JSON-LD script) |
+**Stats** (replace current 50+ fleet / 100+ projects):
+- 20+ Years Experience
+- 11+ Major Projects
+- 100% HDI-Owned
+- R15M+ Project Value Delivered
 
+**Fleet page** — Twin Brothers' profile doesn't describe a vehicle fleet (Silabele-specific). I'll either (a) repurpose this page into an **Equipment & Capabilities** page (welding rigs, fabrication, excavator/plant per logo imagery), or (b) remove it from nav. Default: option (a).
+
+## Technical changes
+
+- `src/index.css` — swap `--primary`, `--accent`, `--secondary`, gradients, shadows to new palette (HSL)
+- `tailwind.config.ts` — rename `navy`/`orange` tokens to new values (keep token names to minimize churn, or alias)
+- `src/assets/twin-brothers-logo.png` — new logo; remove `brightness-0 invert` on transparent header in `Header.tsx`
+- `index.html` — title, meta description, keywords, JSON-LD (LocalBusiness → Twin Brothers, Parys, Free State, services list, phone, email), OG/Twitter tags, favicon
+- `src/components/SEOHead.tsx` baseUrl — leave generic; per-page SEO updated to Twin Brothers
+- `src/components/Header.tsx` — top bar phone/email, logo
+- `src/components/Footer.tsx` — address, contacts, credentials
+- `src/components/Hero.tsx` — new headline/sub copy
+- `src/components/Services.tsx` + `src/pages/ServicesPage.tsx` — 8 services
+- `src/components/About.tsx` + `src/pages/AboutPage.tsx` — vision/mission/leadership/composition
+- `src/pages/ProjectsPage.tsx` — track record table
+- `src/pages/ContactPage.tsx` — new contact details + map for Parys
+- `src/pages/FleetPage.tsx` → Equipment & Capabilities (or removed from nav)
+- `src/components/Stats.tsx` — new numbers
+- `src/components/Clients.tsx` / `Testimonials.tsx` — replace with anonymized references from track record contacts (e.g., "Department of Education", "Afrox", "CMS Water Engineering", "Cosira Group") — no fake testimonials
+- `public/sitemap.xml`, `robots.txt` — domain placeholder
+
+## Out of scope (confirm if you want included)
+- New photography (no real project photos provided — will use neutral construction stock or keep current placeholders)
+- Actual deployment domain / new email infra
+- Removing the Fleet page entirely vs repurposing
